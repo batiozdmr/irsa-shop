@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block seo %}
+
+    <title>{{ site_settings.header_text }}</title>
+    <meta name="keywords" content="{{ site_settings.keyword }}"/>
+    <meta name="description" content="{{ site_settings.description }}">
+    <meta name="author" content="{{ site_settings.header_text }}">
+
+{% endblock seo %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+<!--Head Başla-->
+
+    <div class="heading">
+        <div class="container">
+        <h3>Teknofest Mağaza Hakkında</h3>
+        <p> <a href="#"> Anasayfa</a> / <a href="#"> Hakkında</a></p>
+    </div>
+    </div>
+    <!--Head Bitiş-->
+    <!--Content Başla-->
+    <form action="">
+    <div class="container">
+    <div class="wrapper">
+        <div class="col-lg-12">
+            <div class="row">
+
+                   <p class="hakkinda">2018 yılında bir hayal ile başlayan İstanbul Havacılık, Uzay ve Teknoloji Festivali (TEKNOFEST) İstanbul Havalimanı’nda ilk adımını binlerce insanın katılımı ile attı. <br>
+
+                    Böylece çocukların, gençlerin, öğrencilerin, geleceğe dair hayali olanların coşkuyla destek verdiği TENOFEST markası hayatımıza girdi.<br>
+
+                    Atatürk Havalimanı’nda ikincisi gerçekleştirilen TEKNOFEST, değerli halkımızdan gördüğü büyük teveccüh sayesinde adını dünyanın en büyük uzay, havacılık teknoloji festivali olarak yazdırdı.<br>
+
+                    Yegane amacımız, markamızın misyon ve vizyonu doğrultusunda TEKNOFEST ürünlerinin her kesime ulaşmasını sağlamaktır.<br>
+
+                    Özellikle gençlerimizin ve çocuklarımızın yakından ilgilendiği ve sürekli takip ettiği TEKNOFEST’in marka ürünlerini kişiye özel olarak ve özel aksesuarları ile ülkemizin her bir köşesine ulaştırmak büyük bir sevinç kaynağı.Gönlü bizimle olan milyonlarca insanımızla “MilliTeknolojiHamlesi” hedeflerini daha fazla paylaşmak için ülkemizin her köşesine ulaşacak TEKNOFEST online satış mağazasını kurduk.<br>
+
+                    Sizinle daha müreffeh ve bağımsız bir Türkiye hedefiyle çıktığımız Milli Teknoloji Hamlesi yolculuğumuzda her fırsatta birlikte olmaktan memnuniyet duyacağız.</p>
+
+                </form>
+
+            </div>
+</div>
+<!--Fiyat-->
+    </div>
+    </div>
+    <!--Content Bitiş-->
+{% endblock content %}

@@ -1,0 +1,54 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing app dependencies...
+      - curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.16/2020-11-02/bin/linux/amd64/kubectl
+      - chmod +x ./kubectl
+      - mkdir -p $HOME/bin && mv ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+  pre_build:
+    commands:
+      - REGION=eu-central-1
+      - aws --version
+      - echo $CODEBUILD_SOURCE_VERSION
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin 062033262036.dkr.ecr.eu-central-1.amazonaws.com
+      - echo Logging in to Amazon EKS...
+      - aws eks --region $REGION update-kubeconfig --name baykar-prod
+      - REPOSITORY_URI=062033262036.dkr.ecr.eu-central-1.amazonaws.com/teknofestmagaza
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - kubectl version
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      - docker build --build-arg AWS_CONTAINER_CREDENTIALS_RELATIVE_URI=$AWS_CONTAINER_CREDENTIALS_RELATIVE_URI --build-arg AWS_REGION=$REGION -t $REPOSITORY_URI:latest .
+      - echo Build completed.
+  post_build:
+    commands:
+      - |
+          if expr "${CODEBUILD_SOURCE_VERSION}" : '^refs/heads/master.*' >/dev/null; then
+            NEW_IMAGE=$REPOSITORY_URI:master-$IMAGE_TAG
+            echo Pushing the Docker images...
+            docker tag $REPOSITORY_URI:latest $NEW_IMAGE
+            docker push $NEW_IMAGE
+            echo Modifying manifests...
+            sed -i "s|ECRIMAGE|${NEW_IMAGE}|g" _deploymanifests/*.yaml
+            sed -i "s|DATABASEUSER|${DB_USER}|g" _deploymanifests/*.yaml
+            sed -i "s|DATABASENAME|${DB_NAME}|g" _deploymanifests/*.yaml
+            sed -i "s|DATABASEPASSWORD|${DB_PASS}|g" _deploymanifests/*.yaml
+            sed -i "s|DATABASEHOST|${DB_HOST}|g" _deploymanifests/*.yaml
+            sed -i "s|DATABASEPORT|${DB_PORT}|g" _deploymanifests/*.yaml
+            echo Run migrations...
+            kubectl apply -f _deploymanifests/migration.yaml
+            kubectl wait --for=condition=complete --timeout=300s job/teknofestmagaza-migration -n teknofestmagaza
+            kubectl logs job/teknofestmagaza-migration -n teknofestmagaza
+            kubectl delete job/teknofestmagaza-migration -n teknofestmagaza
+            echo Run deployment...
+            kubectl apply -f _deploymanifests/deployment.yaml
+          else
+            echo Branch is not master or develop, so nothing to-do.
+          fi
+      - echo All success!

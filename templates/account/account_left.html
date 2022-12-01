@@ -1,0 +1,62 @@
+{% load i18n %}
+{% load static %}
+{% load mptt_tags %}
+{% load crispy_forms_tags %}
+{% block extra_css %}
+
+    <style>
+     .nav-link{
+        color: #193B64;
+        transition: all 0.3s;
+       font-size: 14px;
+      }.nav-link:hover:{
+        background-color: #AAD0FD;
+        transition: all 0.3s;
+      }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+          background-color: #DAEBFF;
+          color: #193B64;
+        }
+    </style>
+{% endblock extra_css %}
+<!--
+<ul class="nav nav-tabs mb-4" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" href="#account">{% trans "Bilgilerim" %}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#orders">{% trans "Siparişlerim" %}</a>
+    </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#favorites">{% trans "Favorilerim" %}</a>
+    </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#wishs">{% trans "İstek Listem" %}</a>
+    </li>
+    <li class="nav-item">
+        <a class="" href="/account/password/change/">{% trans "Şifre Değiştir" %}</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="#logout">{% trans "Çıkış" %}</a>
+    </li>
+
+</ul>
+-->
+
+<!--Yeni Kodlar Başlangıç-->
+<div class="row">
+  <div class="col-12 col-md-3">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">{% trans "Bilgilerim" %}</a>
+      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">{% trans "Siparişlerim" %}</a>
+      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">{% trans "Favorilerim" %}</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">{% trans "İstek Listem" %}</a>
+      <a class="nav-link" id="v-pills-adress-tab" data-toggle="pill" href="#v-pills-adress" role="tab" aria-controls="v-pills-adress" aria-selected="false">{% trans "Adreslerim" %}</a>
+      <a class="nav-link" id="v-pills-pass-tab" data-toggle="pill" href="#v-pills-pass" role="tab" aria-controls="v-pills-pass" aria-selected="false">{% trans "Şifre Değiştir" %}</a>
+      <a class="nav-link" id="v-pills-exit-tab" data-toggle="pill" href="#v-pills-exit" role="tab" aria-controls="v-pills-exit" aria-selected="false">{% trans "Çıkış" %}</a>
+    </div>
+  </div>
+
+
+<!--Yeni Kodlar Bitiş-->

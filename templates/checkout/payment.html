@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block seo %}
+
+    <title>{{ site_settings.header_text }}</title>
+    <meta name="keywords" content="{{ site_settings.keyword }}"/>
+    <meta name="description" content="{{ site_settings.description }}">
+    <meta name="author" content="{{ site_settings.header_text }}">
+
+{% endblock seo %}
+
+
+{% block content %}
+
+        <script src="https://www.paytr.com/js/iframeResizer.min.js"></script>
+        <iframe src="https://www.paytr.com/odeme/guvenli/{{ token }}" id="paytriframe" frameborder="0" scrolling="no"
+                style="width: 100%; height: fit-content;" ></iframe>
+        <script>iFrameResize({}, '#paytriframe');</script>
+
+{% endblock content %}

@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block seo %}
+
+    <title>{{ site_settings.header_text }} | {% trans "ÜRÜN DETAY: " %} {{ product_detail.seo_title }}</title>
+    <meta name="keywords" content="{{ site_settings.keyword }}"/>
+    <meta name="description" content="{{ product_detail.seo_description }}">
+    <meta name="author" content="{{ site_settings.header_text }}">
+
+{% endblock seo %}
+{% block extra_css %}
+
+
+{% endblock extra_css %}
+
+{% block content %}
+    <!-- End of Header -->
+    <!--Yeni ürün Detay Başlangıç-->
+    <!--Head Başla-->
+
+    <div class="heading">
+        <div class="container">
+            <h3>{{ product_detail.category }}</h3>
+            <p><a href="#"> {{ product_detail.product_type_select }}</a> / <a
+                    href="#"> {{ product_detail.category }}</a></p>
+        </div>
+    </div>
+
+    <!--Head Bitiş-->
+
+
+    <!--Product Detail Başla-->
+    {% if product_detail.stock > 0 %}
+        <form method="post" action="{% url "checkout/:add-to-cart" %}">
+    {% else %}
+        <form method="post" action="{% url "product/:add-to-request-list" %}">
+    {% endif %}
+{% csrf_token %}
+<input type="hidden" name="product_id" value="{{ product_detail.id }}"/>
+<div class="card">
+    <div class="container">
+        <div class="wrapper row">
+
+
+            <div class="preview col-md-6">
+
+                <div class="preview-pic tab-content">
+                    {% for image in product_detail.images.all %}
+
+                        <div class="tab-pane {{ image.alt }} {% if forloop.counter == 1 %}active{% endif %}"
+                             id="pic-{{ image.id }}"><img src="{{ image.image.url }}"/></div>
+
+                    {% endfor %}
+
+                </div>
+                <ul class="preview-thumbnail nav nav-tabs">
+
+                    {% for image in product_detail.images.all %}
+                        <li class="{{ image.alt }}"><a data-target="#pic-{{ image.id }}" data-toggle="tab"><img
+                                src="{{ image.image.url }}"/></a></li>
+
+
+                    {% endfor %}
+                </ul>
+
+            </div>
+            <div class="details col-md-6">
+                <h3 class="product-title">{{ product_detail.name }}</h3>
+                <div class="rating">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="product-code"><p>{% trans "Ürün Kodu:" %}</p> <span>{{ product_detail.id }}</span></div>
+                    <div class="product-code"><p>{% trans "Adet:" %}</p>
+
+
+                        <div class="">
+                            <input class="form-control ml-2" style="width: 50px;" name="product_quantity" type="number"
+                                   value="1" min="1" max="{{ product_detail.stock }}" required>
+                        </div>
+                    </div>
+                    {% if product_detail.attributes.all %}
+                        <div class="product-code"><p>Ebat:</p> <span>
+
+
+
+                            {% for attributes in product_detail.attributes.all %}
+
+ 
+                                <div class="inp-content-new">
+                                    <input type="radio" name="select_attributes" id="{{ attributes.id }}" value="{{ attributes.id }}" required>
+
+                                <label for="{{ attributes.id }}">{{ attributes }}</label>
+                                </div>
+                            {% endfor %}
+
+
+
+
+                        </span>
+                        </div>
+                    {% endif %}
+
+                    {% if product_detail.product_type_select.id == 6 %}
+                        <div class="product-code"><p>{% trans "Açıklama:" %}</p> <span>
+                            <input class="form-control ml-2" name="product_explanation" type="text" required>
+                        </span>
+                        </div>
+                    {% endif %}
+
+
+                </div>
+                <h4 class="price"><span>{{ product_detail.price }}{% trans " ₺" %}</span></h4>
+                <div class="buy-button">
+                    {% if product_detail.stock == 0 %}
+                    <button type="submit" class="darkblue-buton btn btn-disabled btn-block" disabled>{% trans "STOKTA YOK" %}</button>
+                    {% else %}
+                    <button type="submit" class="darkblue-buton">{% trans "Sepete Ekle" %}</button>
+                    {% endif %}
+                </div>
+
+                <h3 class="product-heading">{% trans "Ürün Açıklaması" %}</h3>
+                <p class="product-description">{{ product_detail.summary|linebreaks|slice:":210" }}</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+    <!--Product Detail Bitiş-->
+
+
+    <!--Popular Başlangıç-->
+    <div class="popular">
+        <div class="container">
+            <h3></h3>
+            <div class="row">
+                {% if widgets_2 %}
+                    <div class="col-lg-6">
+                        <div class="popular-left">
+                            <div class="popular-left-text">
+                                <h3>{{ widgets_2.main_title }}</h3>
+                                {% if widgets_2.button_text %}
+                                    <button class="yellow-buton"
+                                            onclick="location.href='{{ widgets_2.url}}';">{{ widgets_2.button_text }} </button>
+                                {% endif %}
+                            </div>
+                            <div class="popular-left-image">
+                                {% if widgets_2.image.url %}
+                                    <img src="{{ widgets_2.image.url }}" alt="" style="width:323px;height: 212px;">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if widgets_3 %}
+                    <div class="col-lg-6">
+                        <div class="popular-right">
+                            <div class="popular-right-text">
+                                <h3>{{ widgets_3.main_title }}</h3>
+                                {% if widgets_3.button_text %}
+                                    <button class="red-buton"
+                                            onclick="location.href='{{ widgets_3.url}}';">{{ widgets_3.button_text }}</button>
+                                {% endif %}
+                            </div>
+                            <div class="popular-right-image">
+                                {% if widgets_3.image.url %}
+                                    <img src="{{ widgets_3.image.url }}" alt="" style="width:361px;">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </div>
+    <!--Popular Bitiş-->
+    <!--Yeni ürün Detay Bitiş-->
+
+
+{% endblock content %}
+{% block extra_script %}
+
+    <script src="{% static 'vendor/sticky/sticky.min.js' %}"></script>
+
+    <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+
+    <script src="{% static 'vendor/elevatezoom/jquery.elevatezoom.min.js' %}"></script>
+    <script src="{% static 'vendor/photoswipe/photoswipe.min.js' %}"></script>
+    <script src="{% static 'vendor/photoswipe/photoswipe-ui-default.min.js' %}"></script>
+
+{% endblock extra_script %}
+
