@@ -1,0 +1,103 @@
+{% extends "account/base_my_account.html" %}
+{% load i18n %}
+{% load static %}
+{% load mptt_tags %}
+{% load crispy_forms_tags %}
+
+
+{% block account_bread %}
+    {% trans "Siparişlerim" %}
+{% endblock %}
+
+{% block account_content %}
+
+    <div class="col-lg-9 order-lg-last dashboard-content">
+
+
+        {% comment %}
+                    <div class="alert alert-success alert-intro" role="alert">
+                        {% trans "Merhaba Hasan Koç, Hesabım sayfasında Tchibo hesabınızla ilgili tüm bilgileri görebilirsiniz" %}
+                    </div>
+                     {% endcomment %}
+        <ul class="root">
+
+
+            <div class="mb-4"></div><!-- margin -->
+
+            <h3>{% trans "Hesabım" %}</h3>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th>
+                                {% trans "Sipariş No" %}
+                            </th>
+                            <th>
+                                {% trans "Tarih" %}
+
+                            </th>
+                            <th>
+                                {% trans "Durum" %}
+                            </th>
+                            <th>
+                                {% trans "Toplam" %}
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for order in my_orders %}
+
+
+                                <tr>
+                            <td>#98491{{ order.id }}</td>
+                            <td>
+                                {{ order.created_at|date:"d-m-Y" }}
+                            </td>
+                            <td>
+
+                                {% if order.payment_status %}
+                                    {% if order.status %}
+                                        {{ order.status }}
+
+                                        {% elif not order.status  %}
+
+                                         {% trans "Sipariş Verildi" %}
+                                        {% endif %}
+
+                                {% elif not order.payment_status %}
+                                    {% trans "Ödeme Bekleniyor" %}
+
+                                {% endif %}
+                            </td>
+                            <td> ₺{{ order.payment_amount|floatformat:2}}</td>
+                        </tr>
+
+                        {% endfor %}
+
+
+
+                        </tbody>
+                    </table>
+
+                </div><!-- End .col-md-6 -->
+
+            </div><!-- End .row -->
+
+
+        </ul>
+
+
+    </div>
+
+
+
+{% endblock %}
+
+
+{% block link2_active %}
+    class="active"
+
+{% endblock %}
+

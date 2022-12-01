@@ -1,0 +1,2453 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-10 18:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: apps/accounts/models.py:48
+msgid "Adres İsmi"
+msgstr ""
+
+#: apps/accounts/models.py:49 apps/product/models.py:48
+#: apps/product/models.py:179
+msgid "İsim"
+msgstr ""
+
+#: apps/accounts/models.py:50
+msgid "Soyisim"
+msgstr ""
+
+#: apps/accounts/models.py:51
+msgid "Şirket Adı"
+msgstr ""
+
+#: apps/accounts/models.py:52 apps/accounts/models.py:65 apps/main/models.py:24
+msgid "Adres"
+msgstr ""
+
+#: apps/accounts/models.py:54
+msgid "İl"
+msgstr ""
+
+#: apps/accounts/models.py:56
+msgid "Posta Kodu"
+msgstr ""
+
+#: apps/accounts/models.py:59 apps/accounts/models.py:119
+#: apps/main/models.py:23
+msgid "Telefon"
+msgstr ""
+
+#: apps/accounts/models.py:66
+msgid "Adresler"
+msgstr ""
+
+#: apps/accounts/models.py:68 apps/accounts/models.py:155
+#: apps/checkout/models.py:30 apps/checkout/models.py:65 apps/main/models.py:61
+#: apps/main/models.py:80 apps/main/models.py:90 apps/main/models.py:121
+#: apps/main/models.py:153 apps/main/models.py:169 apps/main/models.py:191
+#: apps/order/models.py:36 apps/order/models.py:54 apps/product/models.py:39
+#: apps/product/models.py:60 apps/product/models.py:90
+#: apps/product/models.py:114 apps/product/models.py:144
+#: apps/product/models.py:173 apps/product/models.py:189
+#: apps/product/models.py:210 apps/product/models.py:229
+msgid "liste"
+msgstr ""
+
+#: apps/accounts/models.py:68 apps/accounts/models.py:155
+#: apps/checkout/models.py:30 apps/checkout/models.py:65 apps/main/models.py:61
+#: apps/main/models.py:80 apps/main/models.py:90 apps/main/models.py:121
+#: apps/main/models.py:153 apps/main/models.py:169 apps/main/models.py:191
+#: apps/order/models.py:36 apps/order/models.py:54 apps/product/models.py:39
+#: apps/product/models.py:60 apps/product/models.py:90
+#: apps/product/models.py:114 apps/product/models.py:144
+#: apps/product/models.py:173 apps/product/models.py:189
+#: apps/product/models.py:210 apps/product/models.py:229
+msgid "Listeleme Yetkisi"
+msgstr ""
+
+#: apps/accounts/models.py:69 apps/accounts/models.py:156
+#: apps/checkout/models.py:31 apps/checkout/models.py:66 apps/main/models.py:62
+#: apps/main/models.py:81 apps/main/models.py:91 apps/main/models.py:122
+#: apps/main/models.py:154 apps/main/models.py:170 apps/main/models.py:192
+#: apps/order/models.py:37 apps/order/models.py:55 apps/product/models.py:40
+#: apps/product/models.py:61 apps/product/models.py:91
+#: apps/product/models.py:115 apps/product/models.py:145
+#: apps/product/models.py:174 apps/product/models.py:190
+#: apps/product/models.py:211 apps/product/models.py:230
+msgid "sil"
+msgstr ""
+
+#: apps/accounts/models.py:69 apps/accounts/models.py:156
+#: apps/checkout/models.py:31 apps/checkout/models.py:66 apps/main/models.py:62
+#: apps/main/models.py:81 apps/main/models.py:91 apps/main/models.py:122
+#: apps/main/models.py:154 apps/main/models.py:170 apps/main/models.py:192
+#: apps/order/models.py:37 apps/order/models.py:55 apps/product/models.py:40
+#: apps/product/models.py:61 apps/product/models.py:91
+#: apps/product/models.py:115 apps/product/models.py:145
+#: apps/product/models.py:174 apps/product/models.py:190
+#: apps/product/models.py:211 apps/product/models.py:230
+msgid "Silme Yetkisi"
+msgstr ""
+
+#: apps/accounts/models.py:70 apps/accounts/models.py:157
+#: apps/checkout/models.py:32 apps/checkout/models.py:67 apps/main/models.py:63
+#: apps/main/models.py:82 apps/main/models.py:92 apps/main/models.py:123
+#: apps/main/models.py:155 apps/main/models.py:171 apps/main/models.py:193
+#: apps/order/models.py:38 apps/order/models.py:56 apps/product/models.py:41
+#: apps/product/models.py:62 apps/product/models.py:92
+#: apps/product/models.py:116 apps/product/models.py:146
+#: apps/product/models.py:175 apps/product/models.py:191
+#: apps/product/models.py:212 apps/product/models.py:231
+msgid "ekle"
+msgstr ""
+
+#: apps/accounts/models.py:70 apps/accounts/models.py:157
+#: apps/checkout/models.py:32 apps/checkout/models.py:67 apps/main/models.py:63
+#: apps/main/models.py:82 apps/main/models.py:92 apps/main/models.py:123
+#: apps/main/models.py:155 apps/main/models.py:171 apps/main/models.py:193
+#: apps/order/models.py:38 apps/order/models.py:56 apps/product/models.py:41
+#: apps/product/models.py:62 apps/product/models.py:92
+#: apps/product/models.py:116 apps/product/models.py:146
+#: apps/product/models.py:175 apps/product/models.py:191
+#: apps/product/models.py:212 apps/product/models.py:231
+msgid "Ekleme Yetkisi"
+msgstr ""
+
+#: apps/accounts/models.py:71 apps/accounts/models.py:158
+#: apps/checkout/models.py:33 apps/checkout/models.py:68 apps/main/models.py:64
+#: apps/main/models.py:83 apps/main/models.py:93 apps/main/models.py:124
+#: apps/main/models.py:156 apps/main/models.py:172 apps/main/models.py:194
+#: apps/order/models.py:39 apps/order/models.py:57 apps/product/models.py:42
+#: apps/product/models.py:63 apps/product/models.py:93
+#: apps/product/models.py:117 apps/product/models.py:147
+#: apps/product/models.py:176 apps/product/models.py:192
+#: apps/product/models.py:213 apps/product/models.py:232
+msgid "guncelle"
+msgstr ""
+
+#: apps/accounts/models.py:71 apps/accounts/models.py:158
+#: apps/checkout/models.py:33 apps/checkout/models.py:68 apps/main/models.py:64
+#: apps/main/models.py:83 apps/main/models.py:93 apps/main/models.py:124
+#: apps/main/models.py:156 apps/main/models.py:172 apps/main/models.py:194
+#: apps/order/models.py:39 apps/order/models.py:57 apps/product/models.py:42
+#: apps/product/models.py:63 apps/product/models.py:93
+#: apps/product/models.py:117 apps/product/models.py:147
+#: apps/product/models.py:176 apps/product/models.py:192
+#: apps/product/models.py:213 apps/product/models.py:232
+msgid "Güncelleme Yetkisi"
+msgstr ""
+
+#: apps/accounts/models.py:109
+msgid "username"
+msgstr ""
+
+#: apps/accounts/models.py:112
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: apps/accounts/models.py:115
+msgid "A user with that username already exists."
+msgstr ""
+
+#: apps/accounts/models.py:118
+msgid "email address"
+msgstr ""
+
+#: apps/accounts/models.py:120 templates/account/login.html:74
+msgid "Ad"
+msgstr ""
+
+#: apps/accounts/models.py:121
+msgid "last name"
+msgstr ""
+
+#: apps/accounts/models.py:123
+msgid "staff status"
+msgstr ""
+
+#: apps/accounts/models.py:124
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: apps/accounts/models.py:126
+msgid "active"
+msgstr ""
+
+#: apps/accounts/models.py:128
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: apps/accounts/models.py:136
+msgid "Varsayılan teslimat adresi"
+msgstr ""
+
+#: apps/accounts/models.py:138
+msgid "Varsayılan fatura adresi"
+msgstr ""
+
+#: apps/accounts/models.py:152
+msgid "Kullanıcı"
+msgstr ""
+
+#: apps/accounts/models.py:153
+msgid "Kullanıcılar"
+msgstr ""
+
+#: apps/accounts/views.py:43 apps/accounts/views.py:92
+msgid "Kayıt formunu tekrar kontrol ediniz."
+msgstr ""
+
+#: apps/checkout/models.py:16
+msgid "Kupon Liste Adı"
+msgstr ""
+
+#: apps/checkout/models.py:17
+msgid "Kupon Adet"
+msgstr ""
+
+#: apps/checkout/models.py:18 apps/checkout/models.py:53
+#: apps/product/models.py:49
+msgid "Ücret"
+msgstr ""
+
+#: apps/checkout/models.py:27 templates/checkout/view_cart.html:111
+#: templates/checkout/view_checkout.html:123
+msgid "Kupon"
+msgstr ""
+
+#: apps/checkout/models.py:28
+msgid "Kupon Kod Oluştur"
+msgstr ""
+
+#: apps/checkout/models.py:51
+msgid "Kupon Listesi"
+msgstr ""
+
+#: apps/checkout/models.py:52 templates/checkout/view_cart.html:78
+msgid "Kupon Kodu"
+msgstr ""
+
+#: apps/checkout/models.py:62
+msgid "Kupon Kodları"
+msgstr ""
+
+#: apps/checkout/models.py:63
+msgid "Kupon Kodları Listesi"
+msgstr ""
+
+#: apps/common/oneTextField/oneField.py:10 apps/main/models.py:97
+#: apps/main/models.py:176 apps/product/models.py:70 apps/product/models.py:200
+#: templates/product/product.html:310
+msgid "Başlık"
+msgstr ""
+
+#: apps/common/teams/teamProgramCheck.py:44
+msgid ""
+"Takımınız yarışmanın minumum üye kriterine uymadığı için başvuru "
+"yapamamaktasınız."
+msgstr ""
+
+#: apps/common/teams/teamProgramCheck.py:46
+msgid ""
+"Takımınız yarışmanın maximum üye kriterine uymadığı için başvuru "
+"yapamamaktasınız."
+msgstr ""
+
+#: apps/common/teams/teamProgramCheck.py:48
+msgid ""
+"Yarışma kriteri doğrultusunda takımınızda en az  bir danışman olmalıdır."
+msgstr ""
+
+#: apps/common/teams/teamProgramCheck.py:50
+msgid "Yarışma kriterine göre takımınızda en az bir kaptan olmalıdır."
+msgstr ""
+
+#: apps/common/teams/teamProgramCheck.py:52
+msgid ""
+"Takım danışmanının bu yarışma içerisinde başka bir takımda bulunması yarışma "
+"kriterine uygun değildir."
+msgstr ""
+
+#: apps/common/teams/teamProgramCheck.py:54
+msgid ""
+"Takım üyelerinin bu yarışma içerisinde başka bir takımda bulunması yarışma "
+"kriterine uygun değildir."
+msgstr ""
+
+#: apps/common/teams/teamProgramCheck.py:56
+#: apps/common/teams/teamProgramCheck.py:58
+msgid ""
+"Takım üyelerinin eğitim durumları yarışmanın eğitim seviyesi kriterine uygun "
+"değildir."
+msgstr ""
+
+#: apps/main/models.py:13
+msgid "Firma"
+msgstr ""
+
+#: apps/main/models.py:14
+msgid "Firma Adı"
+msgstr ""
+
+#: apps/main/models.py:15
+msgid "Başlık Metin"
+msgstr ""
+
+#: apps/main/models.py:16
+msgid "Firma Açıklaması"
+msgstr ""
+
+#: apps/main/models.py:17
+msgid "Footer Metni"
+msgstr ""
+
+#: apps/main/models.py:18
+msgid "Firma Logosu"
+msgstr ""
+
+#: apps/main/models.py:20
+msgid "Firma Logosu Footer"
+msgstr ""
+
+#: apps/main/models.py:22 templates/partials/footer.html:89
+msgid "Etiketler"
+msgstr ""
+
+#: apps/main/models.py:25
+msgid "E-Posta"
+msgstr ""
+
+#: apps/main/models.py:58
+msgid "Site Ayarları"
+msgstr ""
+
+#: apps/main/models.py:59
+msgid "Site Ayarları Listesi"
+msgstr ""
+
+#: apps/main/models.py:68
+msgid "Facebook"
+msgstr ""
+
+#: apps/main/models.py:69
+msgid "Twitter"
+msgstr ""
+
+#: apps/main/models.py:70
+msgid "Instagram"
+msgstr ""
+
+#: apps/main/models.py:71
+msgid "linkedin"
+msgstr ""
+
+#: apps/main/models.py:72
+msgid "Pinterest"
+msgstr ""
+
+#: apps/main/models.py:73
+msgid "Youtube"
+msgstr ""
+
+#: apps/main/models.py:74
+msgid "Blog"
+msgstr ""
+
+#: apps/main/models.py:77
+msgid "Site Sosyal Medya Hesapları"
+msgstr ""
+
+#: apps/main/models.py:78
+msgid "Site Sosyal Medya Hesapları Liste"
+msgstr ""
+
+#: apps/main/models.py:87
+msgid "İçerik Tipleri"
+msgstr ""
+
+#: apps/main/models.py:88
+msgid "İçerik Tipleri Liste"
+msgstr ""
+
+#: apps/main/models.py:95 apps/main/models.py:175
+msgid "İçerik Tipi"
+msgstr ""
+
+#: apps/main/models.py:96
+msgid "Menüye Ekle"
+msgstr ""
+
+#: apps/main/models.py:98
+msgid "Özet"
+msgstr ""
+
+#: apps/main/models.py:99
+msgid "İçerik"
+msgstr ""
+
+#: apps/main/models.py:101 apps/main/models.py:136 apps/main/models.py:181
+msgid "Resim"
+msgstr ""
+
+#: apps/main/models.py:118
+msgid "İçerikler"
+msgstr ""
+
+#: apps/main/models.py:119
+msgid "İçerikler Liste"
+msgstr ""
+
+#: apps/main/models.py:129
+msgid "Küçük Başlık"
+msgstr ""
+
+#: apps/main/models.py:130
+msgid "Ana Başlık"
+msgstr ""
+
+#: apps/main/models.py:132
+msgid "Buton Başlığı"
+msgstr ""
+
+#: apps/main/models.py:135 apps/main/models.py:180
+msgid "Link"
+msgstr ""
+
+#: apps/main/models.py:150
+msgid "Slider"
+msgstr ""
+
+#: apps/main/models.py:151
+msgid "Slider Liste"
+msgstr ""
+
+#: apps/main/models.py:166
+msgid "Anasayfa Widget Tipi"
+msgstr ""
+
+#: apps/main/models.py:167
+msgid "Anasayfa Widget Tip Liste"
+msgstr ""
+
+#: apps/main/models.py:177
+msgid "Alt Metin"
+msgstr ""
+
+#: apps/main/models.py:178
+msgid "Button Metni"
+msgstr ""
+
+#: apps/main/models.py:179
+msgid "Icon Class"
+msgstr ""
+
+#: apps/main/models.py:188
+msgid "Anasayfa Widget"
+msgstr ""
+
+#: apps/main/models.py:189
+msgid "Anasayfa Widget Liste"
+msgstr ""
+
+#: apps/order/models.py:14
+msgid "Alıcı"
+msgstr ""
+
+#: apps/order/models.py:15 templates/account/my_account.html:80
+#: templates/account/my_orders.html:36
+msgid "Sipariş No"
+msgstr ""
+
+#: apps/order/models.py:17
+msgid "Ödeme Durumu"
+msgstr ""
+
+#: apps/order/models.py:19 apps/product/models.py:141
+msgid "Ürünler"
+msgstr ""
+
+#: apps/order/models.py:21 templates/checkout/view_cart.html:15
+#: templates/checkout/view_checkout.html:26
+msgid "Sipariş Durumu"
+msgstr ""
+
+#: apps/order/models.py:24
+msgid "Toplam Ödeme"
+msgstr ""
+
+#: apps/order/models.py:33 apps/order/models.py:44
+msgid "Sipariş"
+msgstr ""
+
+#: apps/order/models.py:34
+msgid "Sipariş Listesi"
+msgstr ""
+
+#: apps/order/models.py:43 apps/product/models.py:197
+#: apps/product/models.py:217 templates/checkout/view_cart.html:28
+msgid "Ürün"
+msgstr ""
+
+#: apps/order/models.py:45
+msgid "Miktar"
+msgstr ""
+
+#: apps/order/models.py:51
+msgid "Sipariş Ürünü"
+msgstr ""
+
+#: apps/order/models.py:52
+msgid "Sipariş Ürünleri"
+msgstr ""
+
+#: apps/product/models.py:36 apps/product/models.py:37
+msgid "Bedenler"
+msgstr ""
+
+#: apps/product/models.py:50 apps/product/models.py:123
+#: templates/product/product.html:240
+msgid "Açıklama"
+msgstr ""
+
+#: apps/product/models.py:51
+msgid "Kayıt Aktif"
+msgstr ""
+
+#: apps/product/models.py:57
+msgid "Teslimat Seçenekleri"
+msgstr ""
+
+#: apps/product/models.py:58
+msgid "Teslimat Seçenekleri Listesi"
+msgstr ""
+
+#: apps/product/models.py:69
+msgid "Üst Kategori"
+msgstr ""
+
+#: apps/product/models.py:71
+msgid "Tanım"
+msgstr ""
+
+#: apps/product/models.py:72 apps/product/models.py:162
+#: templates/checkout/view_cart.html:27
+msgid "Görsel"
+msgstr ""
+
+#: apps/product/models.py:74
+msgid "İcon Tag"
+msgstr ""
+
+#: apps/product/models.py:87
+msgid "Kategoriler"
+msgstr ""
+
+#: apps/product/models.py:88
+msgid "Kategoriler Liste"
+msgstr ""
+
+#: apps/product/models.py:100
+msgid "Ürün Tip Adı"
+msgstr ""
+
+#: apps/product/models.py:111 apps/product/models.py:121
+msgid "Ürün Tipi"
+msgstr ""
+
+#: apps/product/models.py:112
+msgid "Ürün Tipi Liste"
+msgstr ""
+
+#: apps/product/models.py:122
+msgid "Ürün Adı"
+msgstr ""
+
+#: apps/product/models.py:124 templates/product/product.html:243
+msgid "Özellikler"
+msgstr ""
+
+#: apps/product/models.py:125
+msgid "Kategori"
+msgstr ""
+
+#: apps/product/models.py:127 templates/checkout/view_cart.html:29
+#: templates/checkout/view_cart.html:31
+msgid "Fiyat"
+msgstr ""
+
+#: apps/product/models.py:128
+msgid "En iyi ürünler"
+msgstr ""
+
+#: apps/product/models.py:129
+msgid "En çok satan ürünler"
+msgstr ""
+
+#: apps/product/models.py:130
+msgid "En son ürünler"
+msgstr ""
+
+#: apps/product/models.py:131
+msgid "Ürün Görselleri"
+msgstr ""
+
+#: apps/product/models.py:132
+msgid "Ürün Stoğu"
+msgstr ""
+
+#: apps/product/models.py:142
+msgid "Ürünler Liste"
+msgstr ""
+
+#: apps/product/models.py:170
+msgid "Ürün Resimleri"
+msgstr ""
+
+#: apps/product/models.py:171
+msgid "Ürün Resimleri Liste"
+msgstr ""
+
+#: apps/product/models.py:186
+msgid "Sipariş Durum"
+msgstr ""
+
+#: apps/product/models.py:187
+msgid "Sipariş Durum Listesi"
+msgstr ""
+
+#: apps/product/models.py:199 apps/product/models.py:219
+msgid "Kişi"
+msgstr ""
+
+#: apps/product/models.py:201 templates/product/product.html:249
+#: templates/product/product.html:317
+msgid "Yorum"
+msgstr ""
+
+#: apps/product/models.py:207
+msgid "Ürün Yorumları"
+msgstr ""
+
+#: apps/product/models.py:208
+msgid "Ürün Yorumları Listesi"
+msgstr ""
+
+#: apps/product/models.py:226
+msgid "Ürün İstek"
+msgstr ""
+
+#: apps/product/models.py:227
+msgid "Ürün İstek Listesi"
+msgstr ""
+
+#: apps/product/views.py:62 apps/product/views.py:63 apps/product/views.py:79
+msgid "Kayıt Başarılı"
+msgstr ""
+
+#: apps/product/views.py:66 apps/product/views.py:67 apps/product/views.py:83
+msgid "Kayıt Başarısız"
+msgstr ""
+
+#: shop/settings.py:176
+msgid "Turkish"
+msgstr ""
+
+#: shop/settings.py:177
+msgid "English"
+msgstr ""
+
+#: shop/urls.py:27
+msgid "account/"
+msgstr ""
+
+#: shop/urls.py:28
+msgid "accounts/"
+msgstr ""
+
+#: shop/urls.py:30
+msgid "product/"
+msgstr ""
+
+#: shop/urls.py:31
+msgid "content/"
+msgstr ""
+
+#: shop/urls.py:32
+msgid "checkout/"
+msgstr ""
+
+#: shop/urls.py:34
+msgid "about/"
+msgstr ""
+
+#: shop/urls.py:35
+msgid "privacy/"
+msgstr ""
+
+#: shop/urls.py:36
+msgid "faq/"
+msgstr ""
+
+#: shop/urls.py:37
+msgid "contact/"
+msgstr ""
+
+#: shop/urls.py:38
+msgid "legal2/"
+msgstr ""
+
+#: shop/urls.py:39
+msgid "legal3/"
+msgstr ""
+
+#: shop/urls.py:41
+msgid "rosetta/"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/admin_menu/templates/admin/base_site.html:5
+msgid "Django site admin"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/admin_menu/templates/admin/base_site.html:61
+msgid "Django administration"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/admin_menu/templatetags/custom_admin_menu.py:137
+#: shopVE/lib/python3.8/site-packages/admin_menu/templatetags/custom_admin_menu.py:138
+msgid "Dashboard"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/forms.py:6
+msgid "Search files"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:5
+msgid "Select an image to embed"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:27
+msgid "Browse for the image you want, then click 'Embed Image' to continue..."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:29
+msgid ""
+"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
+"tab."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:50
+msgid "Images in: "
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:62
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:80
+msgid "Embed Image"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:146
+msgid "Play Slideshow"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:147
+msgid "Pause Slideshow"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:148
+msgid "&lsaquo; Previous Photo"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:149
+msgid "Next Photo &rsaquo;"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:150
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:151
+msgid "&lsaquo; Prev"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/crispy_forms/tests/test_form_helper.py:129
+#: shopVE/lib/python3.8/site-packages/crispy_forms/tests/test_form_helper.py:139
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:53
+msgid "This field is required."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/crispy_forms/tests/test_layout.py:361
+msgid "i18n text"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/crispy_forms/tests/test_layout.py:361
+msgid "i18n legend"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/crispy_forms/tests/test_layout_objects.py:129
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:32
+msgid "Enter a valid value."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/contrib/messages/apps.py:7
+msgid "Messages"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/contrib/sitemaps/apps.py:7
+msgid "Site Maps"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/paginator.py:45
+msgid "That page number is not an integer"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/paginator.py:47
+msgid "That page number is less than 1"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/paginator.py:52
+msgid "That page contains no results"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:103
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:659
+msgid "Enter a valid URL."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:155
+msgid "Enter a valid integer."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:166
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:240
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:247
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:256
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:276
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:261
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:277
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:271
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:275
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:305
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:311
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:343
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:352
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:362
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:377
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:396
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:291
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:326
+msgid "Enter a number."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:398
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:403
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:408
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:470
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/core/validators.py:522
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/base.py:1181
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:759
+msgid "and"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/base.py:1183
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:104
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:105
+msgid "This field cannot be null."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:106
+msgid "This field cannot be blank."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:107
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:111
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:130
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:937
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:938
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:940
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:981
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1045
+msgid "Comma-separated integers"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1094
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1096
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1239
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1099
+msgid "Date (without time)"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1237
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1241
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1245
+msgid "Date (with time)"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1393
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1395
+msgid "Decimal number"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1534
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1537
+msgid "Duration"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1587
+msgid "Email address"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1610
+msgid "File path"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1676
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1678
+msgid "Floating point number"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1716
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1718
+msgid "Integer"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1801
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1817
+msgid "IPv4 address"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1848
+msgid "IP address"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1928
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1929
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1931
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1966
+msgid "Positive integer"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1979
+msgid "Positive small integer"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1993
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2025
+msgid "Small integer"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2032
+msgid "Text"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2060
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2062
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2065
+msgid "Time"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2191
+msgid "URL"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2213
+msgid "Raw binary data"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2278
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2280
+msgid "Universally unique identifier"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/files.py:221
+msgid "File"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/files.py:360
+msgid "Image"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/related.py:778
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/related.py:780
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/related.py:1012
+msgid "One-to-one relationship"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/related.py:1066
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/related.py:1067
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/db/models/fields/related.py:1109
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: shopVE/lib/python3.8/site-packages/django/forms/boundfield.py:149
+msgid ":?.!"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:246
+msgid "Enter a whole number."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:397
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:1127
+msgid "Enter a valid date."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:421
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:1128
+msgid "Enter a valid time."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:443
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:472
+msgid "Enter a valid duration."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:473
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:533
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:534
+msgid "No file was submitted."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:535
+msgid "The submitted file is empty."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:537
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:540
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:601
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:763
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:853
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:1275
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:854
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:969
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:1274
+msgid "Enter a list of values."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:970
+msgid "Enter a complete value."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/fields.py:1186
+msgid "Enter a valid UUID."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: shopVE/lib/python3.8/site-packages/django/forms/forms.py:81
+msgid ":"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/forms.py:207
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/formsets.py:93
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/formsets.py:345
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/formsets.py:352
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/formsets.py:379
+#: shopVE/lib/python3.8/site-packages/django/forms/formsets.py:386
+msgid "Order"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/formsets.py:391
+msgid "Delete"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:754
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:758
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:764
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:773
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:1094
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:1161
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/models.py:1277
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/utils.py:162
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/widgets.py:395
+msgid "Clear"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/widgets.py:396
+msgid "Currently"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/widgets.py:397
+msgid "Change"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/widgets.py:709
+msgid "Unknown"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/widgets.py:710
+msgid "Yes"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/forms/widgets.py:711
+msgid "No"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/template/defaultfilters.py:788
+msgid "yes,no,maybe"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/template/defaultfilters.py:817
+#: shopVE/lib/python3.8/site-packages/django/template/defaultfilters.py:834
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/template/defaultfilters.py:836
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/template/defaultfilters.py:838
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/template/defaultfilters.py:840
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/template/defaultfilters.py:842
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/template/defaultfilters.py:844
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dateformat.py:62
+msgid "p.m."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dateformat.py:63
+msgid "a.m."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dateformat.py:68
+msgid "PM"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dateformat.py:69
+msgid "AM"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dateformat.py:150
+msgid "midnight"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dateformat.py:152
+msgid "noon"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "January"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "February"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "March"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "April"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "May"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "June"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "July"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "August"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "September"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "October"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "November"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:16
+msgid "December"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "jan"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "feb"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "mar"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "apr"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "may"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "jun"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "jul"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "aug"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "sep"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "oct"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "nov"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "dec"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:23
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:24
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:25
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:26
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:27
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:28
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:29
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:30
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:33
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:37
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:38
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:39
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:40
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:41
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:42
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:43
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:44
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:47
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/text.py:69
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/text.py:235
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: shopVE/lib/python3.8/site-packages/django/utils/text.py:254
+#: shopVE/lib/python3.8/site-packages/django/utils/timesince.py:83
+msgid ", "
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopVE/lib/python3.8/site-packages/django/utils/timesince.py:72
+msgid "0 minutes"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/csrf.py:110
+msgid "Forbidden"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/csrf.py:111
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/csrf.py:115
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/csrf.py:120
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/csrf.py:124
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/csrf.py:132
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/csrf.py:137
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/csrf.py:142
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:41
+msgid "No year specified"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:61
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:111
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:208
+msgid "Date out of range"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:90
+msgid "No month specified"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:142
+msgid "No day specified"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:188
+msgid "No week specified"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:338
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:367
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:589
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/dates.py:623
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/detail.py:54
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/list.py:67
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/list.py:72
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/generic/list.py:154
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/static.py:40
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/static.py:42
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/static.py:80
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:7
+msgid "Django: the Web framework for perfectionists with deadlines."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:346
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:368
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:369
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:384
+msgid "Django Documentation"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:385
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:396
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:397
+msgid "Get started with Django"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:408
+msgid "Django Community"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:409
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/django_currentuser/db/models/fields.py:14
+msgid "as default value sets the current logged in user if available"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/jsonfield/fields.py:48
+msgid "Enter valid JSON."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/jsonfield/forms.py:15
+#, python-format
+msgid "\"%(value)s\" value must be valid JSON."
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/apps.py:7
+#: shopVE/lib/python3.8/site-packages/translations/models.py:60
+msgid "translations"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:20
+msgid "content type"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:21
+msgid "the content type of the object to translate"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:26
+msgid "object id"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:27
+msgid "the id of the object to translate"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:35
+msgid "field"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:36
+msgid "the field of the object to translate"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:40
+msgid "language"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:41
+msgid "the language of the translation"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:46
+msgid "text"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:47
+msgid "the text of the translation"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/translations/models.py:59
+msgid "translation"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/versatileimagefield/fields.py:35
+msgid "Versatile Image Field"
+msgstr ""
+
+#: shopVE/lib/python3.8/site-packages/versatileimagefield/templates/versatileimagefield/forms/widgets/versatile_image.html:17
+#: shopVE/lib/python3.8/site-packages/versatileimagefield/templates/versatileimagefield/forms/widgets/versatile_image_bootstrap.html:17
+msgid "Primary Point of Interest"
+msgstr ""
+
+#: templates/403.html:8 templates/404.html:8
+msgid "YETKİ HATASI"
+msgstr ""
+
+#: templates/403.html:33
+msgid "Bu Sayfaya Erişim Yetkiniz Bulunmamaktadır."
+msgstr ""
+
+#: templates/403.html:35 templates/404.html:35
+msgid "Geri Dön"
+msgstr ""
+
+#: templates/404.html:33
+msgid "bir şeyler ters gitti"
+msgstr ""
+
+#: templates/503.html:253
+msgid "Bakım"
+msgstr ""
+
+#: templates/503.html:256
+msgid "Planlı bakım yapıyoruz."
+msgstr ""
+
+#: templates/503.html:262
+msgid ""
+"Geçici erişimden dolayı özür dileriz. Mümkün olduğunca hızlı geri döneceğiz."
+msgstr ""
+
+#: templates/account/login.html:25
+msgid "Üye"
+msgstr ""
+
+#: templates/account/login.html:38 templates/account/login.html:51
+msgid "Üye Girişi"
+msgstr ""
+
+#: templates/account/login.html:43 templates/account/login.html:83
+msgid "E-Mail"
+msgstr ""
+
+#: templates/account/login.html:47
+msgid "Parola"
+msgstr ""
+
+#: templates/account/login.html:49
+msgid "Şifremi Unuttum"
+msgstr ""
+
+#: templates/account/login.html:64 templates/account/login.html:104
+msgid "Üye Ol"
+msgstr ""
+
+#: templates/account/login.html:70
+msgid "Kullanıcı Adı"
+msgstr ""
+
+#: templates/account/login.html:78
+msgid "Soyad"
+msgstr ""
+
+#: templates/account/login.html:87
+msgid "Şifre"
+msgstr ""
+
+#: templates/account/login.html:93
+msgid "Şifre Tekrar"
+msgstr ""
+
+#: templates/account/my_account.html:24 templates/account/my_orders.html:28
+#: templates/partials/footer.html:62 templates/partials/footer.html:158
+#: templates/partials/header.html:86
+msgid "Hesabım"
+msgstr ""
+
+#: templates/account/my_account.html:33 templates/account/my_account.html:56
+msgid "Bilgilerim"
+msgstr ""
+
+#: templates/account/my_account.html:36 templates/account/my_orders.html:9
+msgid "Siparişlerim"
+msgstr ""
+
+#: templates/account/my_account.html:39
+msgid "Adreslerim"
+msgstr ""
+
+#: templates/account/my_account.html:42
+msgid "Şifre Değiştir"
+msgstr ""
+
+#: templates/account/my_account.html:46
+msgid "Çıkış"
+msgstr ""
+
+#: templates/account/my_account.html:64 templates/account/my_account.html:154
+msgid "Kaydet"
+msgstr ""
+
+#: templates/account/my_account.html:83 templates/account/my_orders.html:39
+msgid "Tarih"
+msgstr ""
+
+#: templates/account/my_account.html:87 templates/account/my_orders.html:43
+msgid "Durum"
+msgstr ""
+
+#: templates/account/my_account.html:90 templates/account/my_orders.html:46
+#: templates/checkout/view_cart.html:92
+#: templates/checkout/view_checkout.html:104
+msgid "Toplam"
+msgstr ""
+
+#: templates/account/my_account.html:111 templates/account/my_orders.html:67
+msgid "Sipariş Verildi"
+msgstr ""
+
+#: templates/account/my_account.html:115 templates/account/my_orders.html:71
+msgid "Ödeme Bekleniyor"
+msgstr ""
+
+#: templates/account/my_account.html:143
+msgid "Adres Ekle"
+msgstr ""
+
+#: templates/account/my_account.html:175
+msgid "Varsayılan bir fatura adresi belirlemediniz."
+msgstr ""
+
+#: templates/account/my_account.html:205
+msgid "Çıkış yapmak istediğinize emin misiniz?"
+msgstr ""
+
+#: templates/account/my_account.html:213
+msgid "Çıkış Yap"
+msgstr ""
+
+#: templates/account/password_change.html:11
+#: templates/account/password_change.html:19
+#: templates/account/password_change.html:26
+#: templates/account/password_change.html:33
+msgid "Parola Değiştir"
+msgstr ""
+
+#: templates/account/payment_fail.html:27
+msgid "Sipariş verilemedi. Ödeme hatası."
+msgstr ""
+
+#: templates/account/payment_ok.html:27
+msgid "Teşekkürler. Siparişiniz verildi."
+msgstr ""
+
+#: templates/checkout/view_cart.html:13
+#: templates/checkout/view_checkout.html:24 templates/partials/footer.html:64
+#: templates/partials/footer.html:162 templates/partials/header.html:97
+msgid "Sepet"
+msgstr ""
+
+#: templates/checkout/view_cart.html:14
+#: templates/checkout/view_checkout.html:25
+msgid "Ödeme ve Adres"
+msgstr ""
+
+#: templates/checkout/view_cart.html:30
+msgid "Adet"
+msgstr ""
+
+#: templates/checkout/view_cart.html:55 templates/checkout/view_cart.html:66
+#: templates/checkout/view_cart.html:95 templates/checkout/view_cart.html:104
+#: templates/checkout/view_cart.html:114
+#: templates/checkout/view_checkout.html:107
+#: templates/checkout/view_checkout.html:116
+#: templates/checkout/view_checkout.html:126 templates/index.html:161
+#: templates/index.html:283 templates/partials/header.html:98
+#: templates/partials/header.html:119 templates/partials/header.html:138
+#: templates/product/product.html:103 templates/product/product.html:164
+#: templates/product/product.html:400
+msgid " ₺"
+msgstr ""
+
+#: templates/checkout/view_cart.html:79
+msgid "Uygula"
+msgstr ""
+
+#: templates/checkout/view_cart.html:88
+#: templates/checkout/view_checkout.html:100
+msgid "Sepet Toplam"
+msgstr ""
+
+#: templates/checkout/view_cart.html:101
+#: templates/checkout/view_checkout.html:113 templates/product/product.html:246
+msgid "Kargo"
+msgstr ""
+
+#: templates/checkout/view_cart.html:123
+#: templates/checkout/view_checkout.html:135
+msgid "Sipariş Toplamı"
+msgstr ""
+
+#: templates/checkout/view_cart.html:130
+#: templates/checkout/view_checkout.html:143
+msgid "Siparişi Tamamla"
+msgstr ""
+
+#: templates/checkout/view_checkout.html:38
+msgid "Teslimat Adresi"
+msgstr ""
+
+#: templates/checkout/view_checkout.html:59
+#: templates/checkout/view_checkout.html:89
+msgid "Adres Düzenle/Ekle"
+msgstr ""
+
+#: templates/checkout/view_checkout.html:69
+msgid "Fatura Adresi"
+msgstr ""
+
+#: templates/index.html:87
+msgid "KATEGORİLER"
+msgstr ""
+
+#: templates/index.html:113
+msgid "Çok Satanlar"
+msgstr ""
+
+#: templates/index.html:150 templates/index.html:272
+#: templates/product/product_category_list.html:56
+msgid "Ürün Detayı"
+msgstr ""
+
+#: templates/index.html:154 templates/index.html:276
+#: templates/product/product_category_list.html:60
+msgid "Favoriye Ekle"
+msgstr ""
+
+#: templates/index.html:232 templates/product/product.html:340
+msgid "Öne Çıkan Ürünler"
+msgstr ""
+
+#: templates/partials/footer.html:18
+msgid "E-Bülten"
+msgstr ""
+
+#: templates/partials/footer.html:20
+msgid "Kayıt olun, indirim ve özel fırsatlardan haberiniz olsun."
+msgstr ""
+
+#: templates/partials/footer.html:25
+msgid "Email adresi"
+msgstr ""
+
+#: templates/partials/footer.html:26
+msgid "Ekle"
+msgstr ""
+
+#: templates/partials/footer.html:39
+msgid "İletişim Bilgileri"
+msgstr ""
+
+#: templates/partials/footer.html:42
+msgid "Adres:"
+msgstr ""
+
+#: templates/partials/footer.html:46
+msgid "E-Mail:"
+msgstr ""
+
+#: templates/partials/footer.html:50
+msgid "Telefon:"
+msgstr ""
+
+#: templates/partials/footer.html:60
+msgid "Kısayollar"
+msgstr ""
+
+#: templates/partials/footer.html:63
+msgid "Kargo Takibi"
+msgstr ""
+
+#: templates/partials/footer.html:65
+msgid "İletişim"
+msgstr ""
+
+#: templates/partials/footer.html:73
+msgid "E-Ticaret"
+msgstr ""
+
+#: templates/partials/footer.html:77
+msgid "Yardım ve S.S.S."
+msgstr ""
+
+#: templates/partials/footer.html:78
+msgid "Hakkımızda"
+msgstr ""
+
+#: templates/partials/footer.html:79
+msgid "Gizlilik"
+msgstr ""
+
+#: templates/partials/footer.html:80
+msgid "Teslimat ve İade"
+msgstr ""
+
+#: templates/partials/footer.html:81
+msgid "Mesafeli Satış Sözleşmesi "
+msgstr ""
+
+#: templates/partials/footer.html:152 templates/partials/header.html:19
+#: templates/partials/header_bottom.html:8
+msgid "Anasayfa"
+msgstr ""
+
+#: templates/partials/header.html:51
+msgid "alışveriş yap"
+msgstr ""
+
+#: templates/partials/header.html:74 templates/partials/header.html:156
+msgid "Ara"
+msgstr ""
+
+#: templates/partials/header.html:89 templates/product/product.html:325
+#: templates/product/product.html:328
+msgid "Giriş Yap"
+msgstr ""
+
+#: templates/partials/header.html:108
+msgid "ürün"
+msgstr ""
+
+#: templates/partials/header.html:109
+msgid "Sepeti Görüntüle"
+msgstr ""
+
+#: templates/partials/header.html:137
+msgid "Toplam:"
+msgstr ""
+
+#: templates/partials/header.html:143 templates/product/product_search.html:196
+msgid "Sepete Git"
+msgstr ""
+
+#: templates/product/product.html:26
+msgid "Geri"
+msgstr ""
+
+#: templates/product/product.html:37
+msgid "İleri"
+msgstr ""
+
+#: templates/product/product.html:160
+msgid "KOD:"
+msgstr ""
+
+#: templates/product/product.html:178
+msgid "BEDEN: "
+msgstr ""
+
+#: templates/product/product.html:194
+msgid "ADET: "
+msgstr ""
+
+#: templates/product/product.html:204
+msgid "Sepete Ekle"
+msgstr ""
+
+#: templates/product/product.html:210
+msgid "Stokta Yok"
+msgstr ""
+
+#: templates/product/product.html:214
+msgid "İstek Listeme Ekle"
+msgstr ""
+
+#: templates/product/product.html:265
+msgid "Firma:"
+msgstr ""
+
+#: templates/product/product.html:268
+msgid "Ücret:"
+msgstr ""
+
+#: templates/product/product.html:271
+msgid "Açıklama:"
+msgstr ""
+
+#: templates/product/product.html:299
+msgid "Yorum Ekle"
+msgstr ""
+
+#: templates/product/product.html:300
+msgid "Lütfen başlık ve yorumunuzu girdiktek sonra gönder tuşuna basınız."
+msgstr ""
+
+#: templates/product/product.html:320
+msgid "Gönder"
+msgstr ""
+
+#: templates/product/product.html:326
+msgid "Yorum eklemek için lütfen giriş yapınız"
+msgstr ""
+
+#: templates/product/product.html:342
+msgid "Daha fazla"
+msgstr ""
+
+#: templates/product/product_search.html:191
+msgid "Ürünü sepete ekle."
+msgstr ""
+
+#: templates/product/product_search.html:199
+msgid "Devam Et"
+msgstr ""

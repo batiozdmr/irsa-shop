@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load basket_template_tags %}
+{% block seo %}
+
+
+<title>{{ site_settings.header_text }}</title>
+<meta name="keywords" content="{{ site_settings.keyword }}"/>
+<meta name="description" content="{{ site_settings.description }}">
+<meta name="author" content="{{ site_settings.header_text }}">
+
+{% endblock seo %}
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+{% block content %}
+    <!--Yeni Kodlar Başlangıç-->
+    <!--Head Başla-->
+
+
+    <!--Head Başla-->
+
+    <div class="heading">
+        <div class="container">
+            <h3>{% trans "Sepet" %}</h3>
+            <p><a href="#"> {% trans "Anasayfa" %}</a> / <a href="#"> {% trans "Sepet" %}</a></p>
+        </div>
+    </div>
+
+    <!--Head Bitiş-->
+    <style>
+        .summary {
+            padding: 2.8rem 3rem 2rem;
+            border: 1px solid #e1e1e1;
+            border-radius: 2px;
+        }
+
+        .summary-title {
+            color: #222;
+        }
+
+        .summary-subtitle {
+            font-size: 1.3rem;
+            padding: 1rem 0;
+        }
+
+        .summary-subtotal {
+            border-bottom: 1px solid #e1e1e1;
+            width: 100%;
+        }
+
+        p.summary-total-price {
+            font-size: 1.3rem;
+        }
+
+        .summary td:last-child, .summary th:last-child {
+            text-align: right;
+            min-width: 10rem;
+        }
+    </style>
+
+    <!--Content Başla-->
+
+
+    <div class="container">
+        <div class="wrapper">
+
+            <div class="row ship w-100">
+                <div class="col-lg-8">
+
+                    {% for basket_detail in basket %}
+
+                        <div class="row">
+                            <div class="col-lg-4 col-12">
+                                <div class="basket-content">
+                                    <div class="step-1">
+                                        <h6>{% trans "ÜRÜN" %}</h6>
+                                        <div class="step-1-content">
+                                            <a href="{{ basket_detail.product.get_url }}"><img src="{{ basket_detail.product.images.all.0.image.url }}"
+                                                 style="width: 50%" alt=""></a>
+                                            <div class="text">
+
+
+                                                <h5><a href="{{ basket_detail.product.get_url }}">{{ basket_detail.product.name }}</a></h5>
+
+                                                {% if basket_detail.variant_option %}
+                                                    {% variant_option basket_detail.variant_option as result %}
+
+                                                    <p>{% trans "Beden" %}: {{ result }}</p>
+
+                                                {% endif %}
+                                                {% if basket_detail.variant_explanation %}
+                                                    <p>{% trans "Açıklama" %}: {{ basket_detail.variant_explanation }}</p>
+                                                {% endif %}
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-12">
+                                <style>
+                                    .input-group button {
+                                        padding: 0;
+                                        width: 1.5rem;
+                                        border: 1px solid #ccc;
+                                        font-size: 1.2rem;
+                                        color: #222;
+                                        background-color: transparent;
+                                        cursor: pointer;
+                                        -webkit-appearance: none;
+                                    }
+
+                                    .form-control {
+
+                                        display: block;
+                                        width: 100%;
+                                        min-height: 2rem;
+                                        padding: .85rem 2rem;
+                                        border: 1px solid #e3e3e3;
+                                        line-height: 1.5;
+                                        font-weight: 400;
+                                        color: #666;
+                                        background-color: transparent;
+                                        border-radius: 0;
+                                        box-shadow: none;
+                                        outline: 0;
+                                    }
+                                </style>
+                                <div class="basket-content">
+                                    <div class="step-1">
+                                        <h6>{% trans "ADET" %}</h6>
+                                        {{ basket_detail.qty }}
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="col-lg-2 col-12">
+
+                                <div class="basket-content">
+                                    <div class="step-1">
+                                        <h6>{% trans "FİYAT" %}</h6>
+                                        <div class="step-1-content">
+                                            <p>{{ basket_detail.total_price }} {% trans "TL" %}</p>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-lg-1 col-12">
+
+                                <button onclick="window.location.href = 'delete/{{ basket_detail.product.id }}_{{ basket_detail.variant_option }}_{{ basket_detail.variant_explanation }}';"
+                                        class="delete">{% trans "Sil" %}
+                                </button>
+                            </div>
+                            <div class="basket-hr"></div>
+
+                        </div>
+
+
+                    {% endfor %}
+
+                </div>
+
+                <div class="col-lg-4">
+                    <aside class="sticky-sidebar-wrapper">
+                        <div class="sticky-sidebar" data-sticky-options="{'bottom': 20}">
+                            <div class="summary mb-4">
+                                <h3 class="summary-title text-left font-weight-bold">{% trans "Sepet Toplam" %}</h3>
+                                <hr>
+
+
+                                {% include 'partials/basket.html' %}
+
+
+                                <a class="nextstep-buton mt-2 btn btn-secondary btn-checkout"
+                                   style="width: 100%; background-color: #193b64;"
+                                   href="{% url "checkout/:checkout" %}">{% trans "Devam Et" %}</a>
+
+
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--
+                    <div class="col-lg-12">
+                        <form action="">
+                            <p>Şifrenizi mi unuttunuz? E-posta adresinizi aşağıya girin, size sıfırlamanıza izin veren bir e-posta göndereceğiz. </p>
+                        <p>E-Posta Adresi</p>
+                        <input type="text" name="e-posta" id="">
+                    </div>
+
+                    <div class="col-lg-12 mt-3">
+                        <button class="nextstep-buton">Şifremi Sıfırla</button>
+                    </div>
+
+                </form>
+    -->
+
+    <!--Content Bitiş-->
+
+
+{% endblock content %}
+{% block extra_script %}
+    <script src="{% static 'js/input-number.js' %}"></script>
+{% endblock extra_script %}

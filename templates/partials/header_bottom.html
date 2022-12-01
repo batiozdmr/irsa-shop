@@ -1,0 +1,54 @@
+{% load i18n %}
+{% load static %}
+<div class="header-bottom sticky-header d-none d-lg-block">
+    <div class="container">
+        <nav class="main-nav w-100">
+            <ul class="menu">
+                <li style="border-right: 1px solid #7f7f7f61;">
+                    <a href="https://www.teknofest.org/" style="color: #006693; font-size: unset;">{% trans "TEKNOFEST" %}</a>
+                </li>
+                <li class="active">
+                    <a href="/">{% trans "Anasayfa" %}</a>
+                </li>
+                {% for category in categories_menu_list %}
+                    <li>
+                        <a href="{{category.get_absolute_url}}">{{ category }}</a>
+                        <div class="megamenu megamenu-fixed-width megamenu-3cols">
+                            <div class="row">
+                                {% for child in category.children.all|slice:":2" %}
+
+                                    <div class="col-lg-4">
+                                        <a href="{{child.get_absolute_url}}" class="nolink">{{ child }}</a>
+                                        <ul class="submenu">
+                                            {% for child2 in child.children.all|slice:":8" %}
+                                                <li><a href="{{child2.get_absolute_url}}">{{ child2}}</a></li>
+                                            {% endfor %}
+
+                                        </ul>
+                                    </div>
+
+                                {% endfor %}
+
+                                <div class="col-lg-4 p-0">
+                                    <img src="{{category.background_image.url}}" alt="Menu banner">
+                                </div>
+                            </div>
+                        </div><!-- End .megamenu -->
+                    </li>
+                {% endfor %}
+
+
+            <!--
+                <li class="float-right">
+                    <a href="#" target="_blank">"metin"<span
+                        class="tip tip-new tip-top"> "metin"</span></a>
+                </li>
+                <li class="float-right">
+                    <a href="#">"metin" </a>
+                </li>
+                -->
+
+            </ul>
+        </nav>
+    </div><!-- End .container -->
+</div><!-- End .header-bottom -->

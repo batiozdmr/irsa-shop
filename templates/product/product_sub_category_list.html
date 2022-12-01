@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block seo %}
+
+    <title>{{ site_settings.header_text }} | {% trans " KATEGORİ FİLTRELE: " %} {{ categories_sub_list.name }}</title>
+    <meta name="keywords" content="{{ site_settings.keyword }}"/>
+    <meta name="description" content="{{ site_settings.description }}">
+    <meta name="author" content="{{ site_settings.header_text }}">
+
+{% endblock seo %}
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+{% block content %}
+    <!--Head Başla-->
+
+    <div class="heading">
+        <div class="container">
+            <h3>{{ category.name }}</h3>
+            <p><a href="#"> {% trans "Ana Sayfa" %}</a> / <a href="#"> {{ category.name }}</a></p>
+        </div>
+    </div>
+
+    <!--Head Bitiş-->
+
+
+    <!--Showcase Başlangıç-->
+    <div class="showcase">
+    <div class="container">
+        <div class="row">
+
+            {% for product in product_list %}
+                <div class="col-lg-3 col-6">
+
+                    <div class="showcase-card">
+
+                        <div class="card-top">
+                            <a href="{{ product.get_absolute_url }}">
+                                <img src="{{ product.get_first_image.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="card-bottom">
+                            <h3>{{ product.name }}</h3>
+                            <p class="select-category">{{ categories_sub_list.name }}</p>
+                            <p class="price">{{ product.price }} ₺</p>
+                            <!--<button class="card-buton">İncele</button>-->
+
+
+                                    <a href="{{ product.get_absolute_url }}"
+                                       class="btn-product">
+                                        <button class="card-buton">{% trans "Ürün Detayı" %}</button></a>
+
+
+                        </div>
+                    </div></div>
+
+
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+    <!--Eski Kodlar Başlangıç-->
+    <!--
+        <main class="main">
+        <div class="page-content">
+
+
+
+            <section class="product-wrapper container appear-animate mt-10 pt-3 pb-8" data-animation-options="{
+                    'delay': '.3s'
+                }">
+
+                <h2 class="title">{{ categories_sub_list.name }}</h2>
+                <div class="row cols-2 cols-md-3 cols-lg-4" data-owl-options="{
+                        'items': 5,
+                        'nav': false,
+                        'loop': false,
+                        'dots': true,
+                        'margin': 20,
+                        'responsive': {
+                            '0': {
+                                'items': 2
+                            },
+                            '768': {
+                                'items': 3
+                            },
+                            '992': {
+                                'items': 4,
+                                'dots': false,
+                                'nav': true
+                            }
+                        }
+                    }">
+                    {% for product in product_list %}
+                        <div class="product">
+                            <figure class="product-media">
+                                <a href="{{ product.get_absolute_url }}">
+                                    <img src="{{ product.get_first_image.image.url }}" alt="tb-2"
+                                         width="280" height="315">
+                                </a>
+                                {% if product.label %}
+                                    <div class="product-label-group">
+                                        <label class="product-label label-new">{{ product.label }}</label>
+                                    </div>
+                                {% endif %}
+                                <div class="product-action-vertical">
+                                    <a href="{{ product.get_absolute_url }}" class="btn-product-icon" title="detaylar"><i class="d-icon-bag"></i></a>
+                                </div>
+                                <div class="product-action">
+                                    <a href="{{ product.get_absolute_url }}"
+                                       class="btn-product">{% trans "Ürün Detayı" %}</a>
+                                </div>
+                            </figure>
+                            <div class="product-details">
+                                 <form method="post" id="favoriteForm" class="d-flex justify-content-end"
+                                      action="{% url "product/:add-to-favorite-list" %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="product_id" value="{{ product.id }}"/>
+                                    <a onclick="document.getElementById('favoriteForm').submit();" class="btn-wishlist"
+                                       title="{% trans "Favoriye Ekle" %}"><i
+                                            class="d-icon-heart"></i></a>
+                                </form>
+
+                                <h3 class="product-name">
+                                    <a href="#">{{ product.name }}</a>
+                                </h3>
+                                <div class="product-price">
+                                    <ins class="new-price">{{ product.price }} ₺</ins>
+                                </div>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </section>
+
+
+
+
+
+        </div>
+    </main>
+    -->
+    <!--Eski Kodlar Bitiş-->
+
+{% endblock content %}
+{% block extra_script %}
+{% endblock extra_script %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load mptt_tags %}
+{% load crispy_forms_tags %}
+
+{% block seo %}
+
+    <title>{{ site_settings.header_text }}</title>
+    <meta name="keywords" content="{{ site_settings.keyword }}"/>
+    <meta name="description" content="{{ site_settings.description }}">
+    <meta name="author" content="{{ site_settings.header_text }}">
+
+{% endblock seo %}
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+{% block content %}
+	<main class="main">
+			<div class="page-header page-header-bg text-left" style="background: 70%/cover #D4E1EA url({{ site_contents_detail.image_url }});">
+				<div class="container">
+					<h1><span> </span>
+                        {{ site_contents_detail.title}}</h1>
+ 				</div><!-- End .container -->
+			</div><!-- End .page-header -->
+
+			<nav aria-label="breadcrumb" class="breadcrumb-nav">
+				<div class="container">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/"><i class="icon-home"></i></a></li>
+						<li class="breadcrumb-item active" aria-current="page">{{ site_contents_detail.title}}</li>
+					</ol>
+				</div><!-- End .container -->
+			</nav>
+
+			<div class="about-section">
+				<div class="container">
+					<h2 class="subtitle">{{ site_contents_detail.title}}</h2>
+                    					<p class="lead">“{{ site_contents_detail.description}}”</p>
+
+                    <p>{{ site_contents_detail.content}}</p>
+				</div><!-- End .container -->
+			</div><!-- End .about-section -->
+
+
+		</main><!-- End .main -->
+
+{% endblock content %}
+{% block extra_script %}
+{% endblock extra_script %}
