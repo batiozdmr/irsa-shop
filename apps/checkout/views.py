@@ -8,6 +8,7 @@ import requests
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.mail import EmailMultiAlternatives
 # Create your views here.
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
@@ -55,7 +56,7 @@ def view_checkout(request):
 
         return render(request, 'checkout/view_checkout.html', context)
     else:
-        return HttpResponseRedirect("https://www.teknofestmagaza.com")
+        return HttpResponseRedirect("/")
 
 
 def cart_count(request):
@@ -79,5 +80,53 @@ def cart_delete(request, pk):
 
 @login_required
 def payment(request):
+    Sonuc = 'Siparişiniz Başarılı Bir Şekilde Oluşturuldu'
+    return render(request, 'checkout/payment.html', {'Sonuc': Sonuc})
+
+
+@login_required
+def paymentok(request):
+    basket = Basket(request)
+    if not basket.count() > 0:
+        messages.warning(request, _("Sepet Boş"))
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+    billing_address_obj = Address.objects.filter(user=request.user, billing_address=True).last()
+    shipping_address_obj = Address.objects.filter(user=request.user, shipping_address=True).last()
+    order_obj = Order.objects.create(buyer_id=request.user.id, status_id=2, coupon_code_id=1,
+                                     billing_address_text=billing_address_obj.summary,
+                                     shipping_address_text=shipping_address_obj.summary)
+    basket = Basket(request)
+    for item in basket:
+        product = item["product"]
+        price = item["product"].price
+        quantity = item["qty"]
+
+        if item["variant_option"] != "":
+            option = item["variant_option"]
+        else:
+            option = None
+        if item["variant_explanation"] != "":
+            option_explanation = item["variant_explanation"]
+        else:
+            option_explanation = ""
+        order_item_obj = OrderProducts.objects.create(order=order_obj, product=product, price=price, quantity=quantity,
+                                                      option_id=option, explanation=option_explanation)
+        order_obj.payment_amount = basket.get_total_price()
+        oid = order_obj.id
+        order_obj.save()
+
+    subject, from_email = "Sipariş Alındı", 'iletisim@rubasoft.com'
+    text_content = "Siparişiniz Alındı"
+    html_content = f"""
+                            Siparişiniz alındı profilinizden siparişlerinizi Takip edebilirsiniz.
+                """
+
+    msg = EmailMultiAlternatives(subject, text_content, from_email, [str(request.user.email)], None, None, None, None,
+                                 None, None,
+                                 [from_email])
+    msg.attach_alternative(html_content, "text/html")
+    msg.send()
+
     Sonuc = 'Siparişiniz Başarılı Bir Şekilde Oluşturuldu'
     return render(request, 'checkout/payment_ok.html', {'Sonuc': Sonuc})

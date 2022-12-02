@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% load account socialaccount %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+    <div class="mt-5">
+        <div class="container-login100 mt-5">
+            <div class="wrap-login100 p-6 col-12 col-xl-3 col-md-5 col-sm-9 mt-5">
+                <form class="login100-form validate-form mt-5" method="post">
+                    {% csrf_token %}
+                    <span class="login100-form-title pb-5 mt-5">
+                                {% trans "Giriş" %}
+                            </span>
+                    {% for error_field, error_message in form.errors.items %}
+                        <div class="alert alert-warning alert-dismissible show flex items-center mb-2"
+                             style="padding-right: 0; padding-left: 5px;"
+                             role="alert"><i
+                                data-lucide="alert-circle"
+                                class="w-6 h-6 mr-2"></i> {{ error_message|striptags }}
+                        </div>
+                    {% endfor %}
+                    <div class="panel panel-primary mt-5">
+                        <div class="panel-body tabs-menu-body p-0 pt-5">
+                            <div class="tab-content">
+                                <div class="wrap-input100 validate-input input-group"
+                                     data-bs-validate="Valid email is required: ex@abc.xyz">
+                                    <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                                        <i class="fa fa-envelope-o text-muted" aria-hidden="true"></i>
+                                    </a>
+
+                                    <input type="name" class="input100 border-start-0 form-control ms-0"
+                                           placeholder="{% trans 'Kullanıcı Adı' %}" name="login">
+
+
+                                </div>
+                                <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                    <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                                        <i class="fa fa-eye text-muted" aria-hidden="true"></i>
+                                    </a>
+                                    <input class="input100 border-start-0 form-control ms-0" type="password"
+                                           placeholder="{% trans 'Parola' %}" name="password">
+                                </div>
+                                <div class="container-login100-form-btn">
+                                    <button type="submit" class="login100-form-btn btn-primary">
+                                        {% trans "Giriş" %}
+                                    </button>
+                                </div>
+                                <div class="text-center pt-3">
+                                    <p class="text-dark mb-0">{% trans "Üye Değilmisiniz" %}
+                                        <a href="{% url 'account_signup' %}" class="text-primary ms-1">{% trans "Üye Ol" %}</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!-- CONTAINER CLOSED -->
+    </div>
+{% endblock %}

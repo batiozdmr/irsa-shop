@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% load account socialaccount %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+    <div class="mt-5">
+
+        <div class="container-login100 mt-5">
+            <div class="wrap-login100 p-6 col-12 col-xl-3 col-md-5 col-sm-9 mt-5">
+
+                {% if form.errors %}
+                    {% for field in form %}
+                        {% for error in field.errors %}
+
+                            <div class="alert alert-light alert-danger alert-icon alert-inline mb-4">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h4 class="alert-title">Uyarı!</h4>
+                                {{ error|escape }}
+                                <button type="button" class="btn btn-link btn-close">
+                                    <i class="d-icon-times"></i>
+                                </button>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                        <div class="alert alert-light alert-danger alert-icon alert-inline mb-4">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h4 class="alert-title">Uyarı!</h4>
+                            {{ error|escape }}
+                            <button type="button" class="btn btn-link btn-close">
+                                <i class="d-icon-times"></i>
+                            </button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <form class="ml-lg-2 pb-10 pl-6 pr-6 pl-lg-6 pr-lg-6 grey-section"
+                      method="POST"
+                      action="{% url 'account_signup' %}">
+                    {% csrf_token %}
+                    <span class="login100-form-title pb-5">
+                                {% trans "Üye OL" %}
+                            </span>
+                    <div class="row">
+                        <div class="col-md-12 mb-4">
+                            <input class="form-control" style="height:60px;" name="username"
+                                   type="text"
+                                   placeholder="{% trans "Kullanıcı Adı" %}" required>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+                            <input class="form-control" style="height:60px;" type="email"
+                                   name="email" placeholder="{% trans "E-Mail" %}" required>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <input class="form-control" style="height:60px;" type="password"
+                                   name="password1" placeholder="{% trans "Şifre" %}"
+                                   required>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <input class="form-control" style="height:60px;" type="password"
+                                   name="password2"
+                                   placeholder="{% trans "Şifre Tekrar" %}" required>
+                        </div>
+                        <p>Kişisel verileriniz, <a href="#"> Aydınlatma Metni</a> kapsamında
+                            işlenmektedir. “Üye ol” veya “Sosyal Hesap” butonlarından birine
+                            basarak <a
+                                    href="#"> Üyelik Sözleşmesi</a>’ni, <a href="#"> Rıza
+                                Metni</a>’ni,
+                            <a href="#"> Çerez Politikası</a>’nı okuduğunuzu ve kabul
+                            ettiğinizi
+                            onaylıyorsunuz.</p>
+                    </div>
+                    <button class="btn btn-md btn-primary mb-2">{% trans "Üye Ol" %}</button>
+                </form>
+
+            </div>
+
+        </div><!-- End .col-md-6 -->
+    </div><!-- End .row -->
+{% endblock %}

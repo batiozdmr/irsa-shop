@@ -1,5 +1,8 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render
 
+from apps.accounts.models import Address
+from apps.basket.basket import Basket
 from apps.main.models import SiteSettings
 from apps.product.models import Product, ShippingMethod, Category
 
@@ -13,6 +16,12 @@ def maintenance(request):
     return render(request, "maintenance.html")
 
 
+def getsepet(request):
+    basket = Basket(request)
+    context = {"basket": basket}
+    return render(request, "apps/sepet/sepetheader.html", context)
+
+
 def site_social_links(request):
     if not "coupon_code_price" in request.session:
         request.session['coupon_code_price'] = 0.00
@@ -23,7 +32,6 @@ def site_social_links(request):
 def site_settings(request):
     site_settings = SiteSettings.objects.all().first()
     shipping_methods = ShippingMethod.objects.filter(is_active=True).last()
-
     return {'site_settings': site_settings, 'shipping_methods': shipping_methods}
 
 

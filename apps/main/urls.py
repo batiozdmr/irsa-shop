@@ -1,11 +1,12 @@
 from django.urls import path
 
-from apps.main import views
+from apps.main.views import *
 app_name = "content/"
 
 urlpatterns = [
 
-    path('kvkk/', views.kvkk_page, name="kvkk-detail"),
+    path('kvkk/', kvkk_page, name="kvkk-detail"),
+    path('getsepet/', getsepet, name="getsepet"),
 
 
 ]
