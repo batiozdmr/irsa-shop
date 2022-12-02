@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'oup%-*&wir2763-vce1e--0v4zw*fni-6do8^a$34t8iuha9!s'
 AWS_ACCESS_KEY_ID = 'AKIAX72C3EPOIP27KWYD'
 AWS_SECRET_ACCESS_KEY = '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'
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -110,8 +110,6 @@ TEMPLATES = [
                 'apps.main.views.categories_menu_list',
                 'apps.main.views.site_social_links',
                 'apps.main.views.site_settings',
-                'apps.main.views.site_widgets',
-                'apps.main.views.site_contents',
                 'apps.main.views.view_cart',
                 'apps.basket.context_processors.basket',
 

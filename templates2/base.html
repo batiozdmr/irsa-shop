@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load static %}
+{% load mptt_tags %}
+{% load crispy_forms_tags %}
+<html lang="tr">
+<head>
+    {{ site_settings.tag|safe }}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    {% block seo %}
+
+    {% endblock %}
+
+    <!-- Favicon -->
+    <link href="{{ site_settings.company_logo.url }}" rel="icon" data-n-head="true" sizes="16x16" type="image/png">
+
+    <script>
+        WebFontConfig = {
+            google: {families: ['Open+Sans:400,600,700', 'Poppins:400,600,700']}
+        };
+        (function (d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = "{% static 'js/webfont.js' %}";
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/icon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hover-min.css' %}">
+    <!-- Max-768px -->
+    <link rel="stylesheet" media="(max-width:768px)" href="{% static 'css/max-768px.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <style>
+    </style>
+    {% block extra_css %}
+
+    {% endblock %}
+</head>
+<body>
+<div id="preloader"><img src="{% static 'images/logo.svg' %}"></div>
+<div class="page-wrapper">
+
+    <header class="header">
+        {% include 'partials/header.html' %}
+
+
+    </header>
+
+
+    {% block content %}
+
+    {% endblock %}
+    {% block footer %}
+
+        {% include 'partials/footer.html' %}
+
+    {% endblock %}
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+
+<script>
+    $('.top-carousel').owlCarousel({
+        loop: false,
+        margin: 0,
+        autoplay: false,
+        slideTransition: 'linear',
+        nav: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+</script>
+
+<script>
+    $('.right-carousel').owlCarousel({
+        loop: false,
+        margin: 0,
+        autoplay: false,
+        slideTransition: 'linear',
+        nav: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+</script>
+<script>
+    $('.showcase-carousel').owlCarousel({
+        loop: false,
+        margin: 10,
+        autoplay: false,
+        slideTransition: 'linear',
+        nav: true,
+        navText: [
+            '<img src="{% static 'images/left.svg' %}" alt="">',
+            '<img src="{% static 'images/right.svg' %}" alt="">'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+</script>
+<script src="{% static 'js/jquery-3.4.1.min.js ' %}"></script>
+<script>
+    $('#preloader').show(1).delay(2000).hide(1);
+
+</script>
+<script>
+    $(function () {
+        $source = $("#source");
+        $output = $("#output");
+        $source.keyup(function () {
+            $output.text($source.val());
+        });
+    });
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QPEJQPJ9CR"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-QPEJQPJ9CR');
+</script>
+{% block extra_script %}
+{% endblock %}
+</body>
+</html>

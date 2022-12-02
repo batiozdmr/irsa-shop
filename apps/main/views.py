@@ -5,18 +5,8 @@ from apps.product.models import Product, ShippingMethod, Category
 
 
 def main(request):
-    last_products = Product.objects.filter(active=True).order_by('-id')[:5]
-    best_products = Product.objects.filter(best_product=True, active=True).order_by('-id')
-    best_selling_products = Product.objects.filter(best_selling_product=True, active=True).order_by('-id')
-    product_stock = Product.objects.get(id=39)
-    if product_stock.stock > 0:
-        text_widget = "İncele"
-    else:
-        text_widget = "STOKTA YOK"
-
-    return render(request, "index.html", {'last_products': last_products, 'best_products': best_products,
-                                          'best_selling_products': best_selling_products, 'text_widget': text_widget
-                                          })
+    products = Product.objects.filter(active=True).order_by('-id')
+    return render(request, "index.html", {'products': products})
 
 
 def maintenance(request):
