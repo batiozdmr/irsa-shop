@@ -1,0 +1,36 @@
+{% load i18n %}
+<div class="drop-heading border-bottom">
+    <div class="d-flex">
+        <h6 class="mt-1 mb-0 fs-16 fw-semibold text-dark"> Sepetim</h6>
+        <div class="ms-auto">
+            <span class="badge bg-danger-transparent header-badge text-danger fs-14">Acele et!</span>
+        </div>
+    </div>
+</div>
+<div class="header-dropdown-list message-menu ps">
+    {% for basket_detail in basket %}
+        <div class="dropdown-item d-flex p-4">
+            <a href="{{ basket_detail.product.get_url }}" class="open-file"></a>
+            <span class="avatar avatar-xl br-5 me-3 align-self-center cover-image"
+                  data-bs-image-src="{{ basket_detail.product.images.all.0.image.url }}"
+                  style="background: url({{ basket_detail.product.images.all.0.image.url }}) center center;"></span>
+            <div class="wd-50p">
+                <h5 class="mb-1">{{ basket_detail.product.name }}</h5>
+                <span>Beden: <span class="text-success">{{ result }}</span></span>
+                <p class="fs-13 text-muted mb-0">Adet: {{ basket_detail.qty }}</p>
+            </div>
+            <div class="ms-auto text-end d-flex fs-16">
+            <span class="fs-16 text-dark d-none d-sm-block px-4">
+                {{ basket_detail.total_price }} {% trans "TL" %}
+            </span>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<div class="dropdown-divider m-0"></div>
+<div class="dropdown-footer">
+    <a class="btn btn-primary btn-pill w-sm btn-sm py-2" href="{% url "checkout/:checkout" %}"><i
+            class="fa fa-check-circle"></i> Ödeme</a>
+    <span class="float-end p-2 fs-17 fw-semibold">Toplam: {{ basket.get_total_price }} TL</span>
+</div>
+

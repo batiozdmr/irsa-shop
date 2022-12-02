@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+
+{% block content %}
+    <div class="main-content mt-0 hor-content">
+        <div class="side-app">
+            <!-- CONTAINER -->
+            <div class="main-container container">
+                <!-- ROW-1 OPEN -->
+                <div class="row ship w-100">
+                    <div class="col-lg-8">
+                        <div class="row">
+
+                            <div class="col-lg-6 mb-4">
+                                <div class="card card-address pl-3 pt-3 pr-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">{% trans "Fatura Adresi" %}</h4>
+                                        <hr>
+
+                                        {% if billing_address_obj and billing_address_obj %}
+
+                                            <p>
+
+                                            </p>
+                                            <h6 class="card-title font-weight-bold pt-2 pb-2">{{ billing_address_obj.name }}</h6>
+                                            <p class="font-weight-bold">{{ billing_address_obj.first_name }} {{ billing_address_obj.last_name }}</p>
+
+                                            <p>
+                                                <br>
+                                                {{ billing_address_obj.street_address_1 }}
+                                                <br>
+                                            <p>
+                                                {{ billing_address_obj.phone }}
+                                            </p>
+
+                                            </p>
+                                            <a href="{% url 'accounts/:edit-address' billing_address_obj.id %}"
+                                               class="nextstep-buton mt-2 btn btn-secondary btn-checkout"
+                                               style="width: 100%; background-color: #193b64;">{% trans "Adresi düzenle" %}</a>
+
+
+                                            <p></p>
+                                        {% else %}
+
+                                            <p>{% trans "Varsayılan bir fatura adresi belirlemediniz.." %}</p>
+
+                                            <a href="{% url "accounts/:add-address" %}"
+                                               class="nextstep-buton mt-2 btn btn-secondary btn-checkout"
+                                               style="width: 100%; background-color: #193b64;">{% trans "Adres Ekle" %}</a>
+
+                                        {% endif %}
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="col-lg-6 mb-4">
+                                <div class="card card-address pl-3 pt-3 pr-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">{% trans "Teslimat Adresi" %}</h4>
+                                        <hr>
+
+                                        {% if shipping_address_obj and billing_address_obj %}
+
+                                            <p>
+
+                                            </p>
+                                            <h6 class="card-title font-weight-bold pt-2 pb-2">{{ shipping_address_obj.name }}</h6>
+                                            <p class="font-weight-bold">{{ shipping_address_obj.first_name }} {{ shipping_address_obj.last_name }}</p>
+
+                                            <p>
+                                                <br>
+                                                {{ shipping_address_obj.street_address_1 }}
+                                                <br>
+                                            <p>
+                                                {{ shipping_address_obj.phone }}
+                                            </p>
+
+                                            </p>
+                                            <a href="{% url 'accounts/:edit-address' shipping_address_obj.id %}"
+                                               class="nextstep-buton mt-2 btn btn-secondary btn-checkout"
+                                               style="width: 100%; background-color: #193b64;">{% trans "Adresi düzenle" %}</a>
+
+
+                                            <p></p>
+                                        {% else %}
+
+                                            <p>{% trans "Varsayılan bir teslimat adresi belirlemediniz.." %}</p>
+
+                                            <a href="{% url "accounts/:add-address" %}"
+                                               class="nextstep-buton mt-2 btn btn-secondary btn-checkout"
+                                               style="width: 100%; background-color: #193b64;">{% trans "Adres Ekle" %}</a>
+
+                                        {% endif %}
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <style>
+                        .summary {
+                            padding: 2.8rem 3rem 2rem;
+                            border: 1px solid #e1e1e1;
+                            border-radius: 2px;
+                        }
+
+                        .summary-title {
+                            color: #222;
+                        }
+
+                        .summary-subtitle {
+                            font-size: 1.3rem;
+                            padding: 1rem 0;
+                        }
+
+                        .summary-subtotal {
+                            border-bottom: 1px solid #e1e1e1;
+                            width: 100%;
+                        }
+
+                        p.summary-total-price {
+                            font-size: 1.3rem;
+                        }
+
+                        .summary td:last-child, .summary th:last-child {
+                            text-align: right;
+                            min-width: 10rem;
+                        }
+                    </style>
+                    <div class="col-lg-4">
+                        <aside class="sticky-sidebar-wrapper">
+                            <div class="sticky-sidebar" data-sticky-options="{'bottom': 20}">
+                                <div class="summary mb-4">
+                                    <h3 class="summary-title text-left font-weight-bold " style="color: #ffffff;">{% trans "Sepet Toplam" %}</h3>
+                                    <hr>
+
+
+                                    {% include 'partials/basket.html' %}
+
+
+
+                                    {% if shipping_address_obj and billing_address_obj %}
+
+                                        <a class="nextstep-buton mt-2 btn btn-secondary btn-checkout"
+                                           style="width: 100%; background-color: #193b64;"
+                                           href="{% url "checkout/:payment" %}">{% trans "Devam Et" %}</a>
+
+                                    {% else %}
+                                        <a class="nextstep-buton mt-2 btn btn-secondary btn-checkout"
+                                           style="width: 100%; background-color: #193b64;"
+                                           href="{% url "accounts/:add-address" %}">{% trans "Ödemeyi Tamamlamak için adres ekleyiniz" %}</a>
+                                    {% endif %}
+
+
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+
+
+                </div>
+                <!-- ROW-1 END -->
+            </div>
+            <!-- CONTAINER CLOSED -->
+        </div>
+    </div>
+{% endblock %}

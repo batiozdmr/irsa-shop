@@ -30,37 +30,7 @@ class CustomSignupView(SignupView):
 
 @login_required
 def my_account(request):
-    billing_address_obj = Address.objects.filter(user=request.user, billing_address=True).last()
-    shipping_address_obj = Address.objects.filter(user=request.user, shipping_address=True).last()
-    user_address_list=Address.objects.filter(user=request.user)
-    product_request_list = ProductRequestList.objects.filter(user=request.user)
-    product_favorite_list = ProductFavoriteList.objects.filter(user=request.user)
-    categories = Category.objects.filter(level=0, )
-    create_address_form = AddressForm()
-
-    my_orders = Order.objects.filter(buyer=request.user).order_by('-id')
-
-    addresses = Address.objects.filter(user=request.user)
-    if request.method == 'POST':
-        user_form = UserForm(request.POST or None, instance=request.user)
-
-        if user_form.is_valid():
-            user_form.save()
-        else:
-            messages.error(request, _('Kayıt formunu tekrar kontrol ediniz.'))
-            return render(request, 'account/my_account.html',
-                          {'user_detail': request.user, 'my_orders': my_orders, 'categories': categories, 'user_form': user_form,'addresses': addresses,
-                           'product_request_list': product_request_list, 'product_favorite_list': product_favorite_list,
-                           'create_address_form': create_address_form})
-
-    else:
-
-        user_form = UserForm(instance=request.user)
-    return render(request, 'account/my_account.html',
-                  {'user_detail': request.user,'my_orders': my_orders,'user_address_list': user_address_list, 'categories': categories, 'user_form': user_form,
-                   'product_request_list': product_request_list, 'product_favorite_list': product_favorite_list,
-                   'create_address_form': create_address_form, 'billing_address_obj': billing_address_obj,
-                   'shipping_address_obj': shipping_address_obj})
+    return HttpResponseRedirect(reverse("checkout/:checkout"))
 
 
 @login_required

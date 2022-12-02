@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+
+{% block content %}
+    <div class="main-content mt-0 hor-content">
+        <div class="side-app">
+            <!-- CONTAINER -->
+            <div class="main-container container">
+                <!-- ROW-1 OPEN -->
+                <div class="page-content mt-10 mb-10">
+                    <div class="container pt-1">
+                        <div class="tab tab-vertical">
+
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="account">
+
+                                    <form class="form" method="POST" role="form">
+                                        <h3 class="modal-title mb-3"
+                                            id="addressFormModalLabel">{% trans "Adres" %}</h3>
+                                        {% csrf_token %}
+                                        {% for alan in address_form %}
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label>{{ alan.label }}</label>
+                                                    {{ alan }}
+                                                </div>
+
+                                            </div>
+                                        {% endfor %}
+
+
+                                        <button type="submit"
+                                                class="btn btn-primary btn-reveal-right mt-3">{% trans "Kaydet" %} <i
+                                                class="d-icon-arrow-right"></i></button>
+                                    </form>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ROW-1 END -->
+            </div>
+            <!-- CONTAINER CLOSED -->
+        </div>
+    </div>
+{% endblock %}

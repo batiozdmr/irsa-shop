@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load static %}
+
+
+<table class="shipping">
+    <tr class="summary-subtotal">
+        <td>
+            <h4 class="summary-subtitle">{% trans "Toplam" %}</h4>
+        </td>
+        <td>
+            <p class="summary-subtotal-price">
+                {{ basket.get_subtotal_price|floatformat:2 }}{% trans " ₺" %}</p>
+        </td>
+    </tr>
+    <tr class="summary-subtotal">
+
+        <td>
+            <h4 class="summary-subtitle">{% trans "Kargo" %}</h4>
+        </td>
+        <td>
+            <p class="summary-subtotal-price">
+                {{ shipping_methods.fee }}{% trans " ₺" %}</p>
+        </td>
+
+    </tr>
+</table>
+
+<table>
+    <tbody>
+    <tr class="summary-subtotal">
+        <td>
+            <h4 class="summary-subtitle">{% trans "Sipariş Toplamı" %}</h4>
+        </td>
+        <td>
+            <p class="summary-total-price font-weight-bolder">{{ basket.get_total_price }} {% trans "TL" %}</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
