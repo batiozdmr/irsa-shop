@@ -12,15 +12,8 @@ from apps.product.models import Product, Category, ProductComment, ProductReques
 
 def product_detail(request, slug):
     product_detail = get_object_or_404(Product, slug=slug, active=True)
-    left_product = Product.objects.filter(category__slug=product_detail.category.slug, active=True).filter(
-        id__lte=int(product_detail.id)).first()
-    right_product = Product.objects.filter(category__slug=product_detail.category.slug, active=True).filter(
-        id__gte=int(product_detail.id)).first()
-    product_list = Product.objects.filter(category__slug=product_detail.category.slug, active=True)
-    best_products = Product.objects.filter(best_product=True, active=True).order_by('-id')
-    return render(request, 'product/product.html',
-                  {"best_products": best_products, "product_detail": product_detail, "product_list": product_list,
-                   "left_product": left_product, "right_product": right_product})
+
+    return render(request, 'product/product.html',{"product_detail": product_detail})
 
 
 def product_category_list(request, slug):

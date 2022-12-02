@@ -3,9 +3,9 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-admin.site.site_header = 'Teknofest Mağaza Yönetimi'
-admin.site.index_title = 'Teknofest Mağaza Yönetimi'
-admin.site.site_title = 'Teknofest Mağaza Yönetim Paneli'
+admin.site.site_header = 'IRSA Mağaza Yönetimi'
+admin.site.index_title = 'IRSA Mağaza Yönetimi'
+admin.site.site_title = 'IRSA Mağaza Yönetim Paneli'
 
 from apps.main.views import main, about_page, privacy_page, faq_page, legal_2_page, legal_3_page, \
     maintenance, legal_4_page

@@ -1,255 +1,425 @@
 {% extends "base.html" %}
-{% load i18n %}
-{% load static %}
-{% block seo %}
-
-    <title>{{ site_settings.header_text }}</title>
-    <meta name="keywords" content="{{ site_settings.keyword }}"/>
-    <meta name="description" content="{{ site_settings.description }}">
-    <meta name="author" content="{{ site_settings.header_text }}">
-
-{% endblock seo %}
-{% block extra_css %}
-    <style>
-
-    </style>
-{% endblock extra_css %}
-{% block header %}
+{% load i18n static %}
 
 
-{% endblock %}
 {% block content %}
-<!--Top Slider Başlangıç-->
-<section>
-<div class="Topslider">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-
-                <div class="top-carousel owl-carousel owl-theme">
-                    {% for content in main_slider %}
-
-                    <div class="item">
-                        <img src="{{ content.image_url }}" alt="">
-                    </div>
-                    {% endfor %}
-                </div>
-
-            </div>
-
-
-            <div class="col-lg-4">
-                <div class="col-lg-12">
-                    <div class="right-carousel owl-carousel owl-theme">
-                        {% for content in best_products %}
-                        <!--Item Başlangıç-->
-                        <div class="item">
-                            <div class="right-slider">
-                                <div class="right-slider-left">
-                                    <img src="{{ content.get_first_image.image_url }}" alt="" style="width:143px; height: 153px;">
+    <div class="main-content mt-0 hor-content">
+        <div class="side-app">
+            <!-- CONTAINER -->
+            <div class="main-container container">
+                <!-- ROW-1 OPEN -->
+                <div class="row row-cards">
+                    <div class="col-xl-3 col-lg-4">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">Categories</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item border-0 p-0"><a href="javascript:void(0)"><i
+                                                    class="fe fe-chevron-right"></i> Mens </a><span
+                                                    class="product-label">22</span></li>
+                                            <li class="list-group-item border-0 p-0"><a href="javascript:void(0)"><i
+                                                    class="fe fe-chevron-right"></i> Womens </a><span
+                                                    class="product-label">15</span></li>
+                                            <li class="list-group-item border-0 p-0"><a href="javascript:void(0)"><i
+                                                    class="fe fe-chevron-right"></i> Kids </a><span
+                                                    class="product-label">10</span></li>
+                                            <li class="list-group-item border-0 p-0"><a href="javascript:void(0)"><i
+                                                    class="fe fe-chevron-right"></i> Others </a><span
+                                                    class="product-label">88</span></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="right-slider-right">
-                                    <h3>{{ content.name }}</h3>
-                                    <div class="ruler"></div>
-                                    <p>{{ content.price }} {% trans " ₺" %}</p>
-                                    <button class="small-buton">
-                                    <a class="" href="{{ content.get_absolute_url }}">
-                                        {% trans "İncele" %}
-                                    </a>
-                                    </button>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">Price Range</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <label class="custom-control custom-radio mb-0 mt-1">
+                                            <input type="radio" class="custom-control-input" name="example-radios"
+                                                   value="option1" checked="">
+                                            <span class="custom-control-label">Upto $500</span>
+                                        </label>
+                                        <label class="custom-control custom-radio mb-0 mt-1">
+                                            <input type="radio" class="custom-control-input" name="example-radios"
+                                                   value="option1">
+                                            <span class="custom-control-label">$500 - $1000</span>
+                                        </label>
+                                        <label class="custom-control custom-radio mb-0 mt-1">
+                                            <input type="radio" class="custom-control-input" name="example-radios"
+                                                   value="option1">
+                                            <span class="custom-control-label">$1000 - $1500</span>
+                                        </label>
+                                        <label class="custom-control custom-radio mb-0 mt-1">
+                                            <input type="radio" class="custom-control-input" name="example-radios"
+                                                   value="option1">
+                                            <span class="custom-control-label">Over $2000</span>
+                                        </label>
+                                        <div class="d-flex">
+                                            <div class="card-body px-0">
+                                                <div id="mySlider"
+                                                     class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                                    <div class="ui-slider-range ui-widget-header ui-corner-all"
+                                                         style="left: 19.2113%; width: 30.3337%;"></div>
+                                                    <span class="ui-slider-handle ui-state-default ui-corner-all"
+                                                          tabindex="0" style="left: 19.2113%;"></span><span
+                                                        class="ui-slider-handle ui-state-default ui-corner-all"
+                                                        tabindex="0" style="left: 49.545%;"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">
+                                            Colors
+                                        </h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <form class="shop__filter">
+                                            <div class="row gutters-xs">
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="azure"
+                                                               class="colorinput-input" checked="">
+                                                        <span class="colorinput-color bg-azure"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="indigo"
+                                                               class="colorinput-input">
+                                                        <span class="colorinput-color bg-indigo"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="purple"
+                                                               class="colorinput-input">
+                                                        <span class="colorinput-color bg-purple"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="pink"
+                                                               class="colorinput-input">
+                                                        <span class="colorinput-color bg-pink"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="red"
+                                                               class="colorinput-input">
+                                                        <span class="colorinput-color bg-red"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="orange"
+                                                               class="colorinput-input">
+                                                        <span class="colorinput-color bg-orange"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="yellow"
+                                                               class="colorinput-input">
+                                                        <span class="colorinput-color bg-yellow"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="lime"
+                                                               class="colorinput-input">
+                                                        <span class="colorinput-color bg-lime"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="colorinput">
+                                                        <input name="color" type="radio" value="green"
+                                                               class="colorinput-input">
+                                                        <span class="colorinput-color bg-green"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label class="form-label">Category</label>
+                                            <select name="beast" id="select-beast"
+                                                    class="form-control form-select select2 select2-hidden-accessible"
+                                                    tabindex="-1" aria-hidden="true">
+                                                <option value="0">--Select--</option>
+                                                <option value="1">Dress</option>
+                                                <option value="2">Bags &amp; Purses</option>
+                                                <option value="3">Coat &amp; Jacket</option>
+                                                <option value="4">Beauty</option>
+                                                <option value="5">Jeans</option>
+                                                <option value="5">Jewellery</option>
+                                                <option value="5">Electronics</option>
+                                                <option value="5">Sports</option>
+                                                <option value="5">Technology</option>
+                                                <option value="5">Watches</option>
+                                                <option value="5">Accessories</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                           dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-select-beast-container"><span
+                                                class="select2-selection__rendered" id="select2-select-beast-container"
+                                                title="--Select--">--Select--</span><span
+                                                class="select2-selection__arrow" role="presentation"><b
+                                                role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Brand</label>
+                                            <select name="beast" id="select-beast1"
+                                                    class="form-control form-select select2 select2-hidden-accessible"
+                                                    tabindex="-1" aria-hidden="true">
+                                                <option value="0">--Select--</option>
+                                                <option value="1">White</option>
+                                                <option value="2">Black</option>
+                                                <option value="3">Red</option>
+                                                <option value="4">Green</option>
+                                                <option value="5">Blue</option>
+                                                <option value="6">Yellow</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                           dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-select-beast1-container"><span
+                                                class="select2-selection__rendered" id="select2-select-beast1-container"
+                                                title="--Select--">--Select--</span><span
+                                                class="select2-selection__arrow" role="presentation"><b
+                                                role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Type</label>
+                                            <select name="beast" id="select-beast2"
+                                                    class="form-control form-select select2 select2-hidden-accessible"
+                                                    tabindex="-1" aria-hidden="true">
+                                                <option value="0">--Select--</option>
+                                                <option value="1">Extra Small</option>
+                                                <option value="2">Small</option>
+                                                <option value="3">Medium</option>
+                                                <option value="4">Large</option>
+                                                <option value="5">Extra Large</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                           dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-select-beast2-container"><span
+                                                class="select2-selection__rendered" id="select2-select-beast2-container"
+                                                title="--Select--">--Select--</span><span
+                                                class="select2-selection__arrow" role="presentation"><b
+                                                role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Color</label>
+                                            <select name="beast" id="select-beast3"
+                                                    class="form-control form-select select2 select2-hidden-accessible"
+                                                    tabindex="-1" aria-hidden="true">
+                                                <option value="0">--Select--</option>
+                                                <option value="1">White</option>
+                                                <option value="2">Black</option>
+                                                <option value="3">Red</option>
+                                                <option value="4">Green</option>
+                                                <option value="5">Blue</option>
+                                                <option value="6">Yellow</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                           dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-select-beast3-container"><span
+                                                class="select2-selection__rendered" id="select2-select-beast3-container"
+                                                title="--Select--">--Select--</span><span
+                                                class="select2-selection__arrow" role="presentation"><b
+                                                role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">Top Products</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="">
+                                            <div class="d-flex overflow-visible">
+                                                <img class="avatar bradius avatar-xl me-4 p-2 bg-white border"
+                                                     src="../assets/images/png/4.png" alt="avatar-img">
+                                                <div class="media-body valign-middle">
+                                                    <a href="javascript:void(0)" class="fw-semibold text-dark">Hand
+                                                        Bag</a>
+                                                    <div class="mb-1 text-warning">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <h5 class="fw-bold">$345</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <img class="avatar bradius avatar-xl me-4 p-2 bg-white border"
+                                                     src="../assets/images/png/2.png" alt="avatar-img">
+                                                <div class="media-body valign-middle">
+                                                    <a href="javascript:void(0)" class="fw-semibold text-dark">Chair</a>
+                                                    <div class="mb-1 text-warning">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <h5 class="fw-bold">$345</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <img class="avatar bradius avatar-xl me-4 p-2 bg-white border"
+                                                     src="../assets/images/png/1.png" alt="avatar-img">
+                                                <div class="media-body valign-middle">
+                                                    <a href="javascript:void(0)" class="fw-semibold text-dark">Laptop
+                                                        Bag</a>
+                                                    <div class="mb-1 text-warning">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <h5 class="fw-bold">$345</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <img class="avatar bradius avatar-xl me-4 p-2 bg-white border"
+                                                     src="../assets/images/png/3.png" alt="avatar-img">
+                                                <div class="media-body valign-middle">
+                                                    <a href="javascript:void(0)" class="fw-semibold text-dark">Watch</a>
+                                                    <div class="mb-1 text-warning">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                    <h5 class="fw-bold">$345</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!--Item Bitiş-->
-                        {% endfor %}
-
-
                     </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="right-carousel owl-carousel owl-theme">
-                        {% for content in last_products %}
-                        <!--Item Başlangıç-->
-                        <div class="item">
-                            <div class="right-slider">
-                                <div class="right-slider-left">
-                                    <img src="{{ content.get_first_image.image_url }}" alt="" style="width:143px;height: 153px;">
+                    <!-- COL-END -->
+                    <div class="col-xl-9 col-lg-8">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card p-0">
+                                    <div class="card-body p-4">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-8 col-md-8 col-sm-8">
+                                                <div class="input-group d-flex w-100 float-start">
+                                                    <label for="search_id"></label>
+                                                    <input type="text" id="search_id" class="form-control border-end-0 my-2"
+                                                                                          placeholder="Ara ...">
+                                                    <button class="btn input-group-text bg-transparent border-start-0 text-muted my-2">
+                                                        <i class="fe fe-search text-muted" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="right-slider-right">
-                                    <h3>{{ content.name }}</h3>
-                                    <div class="ruler"></div>
-                                    <p>{{ content.price }} {% trans " ₺" %}</p>
-                                    <button class="small-buton">
-                                    <a class="" href="{{ content.get_absolute_url }}">
-                                        {% trans "İncele" %}
-                                    </a>
-                                    </button>
-                                </div>
-
                             </div>
                         </div>
-                        <!--Item Bitiş-->
-
-                        {% endfor %}
-
-
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab-11" role="tabpanel">
+                                <div class="row">
+                                    {% for product in products %}
+                                        <div class="col-md-6 col-xl-4 col-sm-6">
+                                            <div class="card">
+                                                <div class="product-grid6">
+                                                    <div class="product-image6 p-5">
+                                                        <ul class="icons">
+                                                            <li>
+                                                                <a href="{{ product.get_absolute_url }}"
+                                                                   class="btn btn-primary">
+                                                                    <i class="fe fe-eye"> </i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <a href="{{ product.get_absolute_url }}">
+                                                            <img class="img-fluid br-7 w-100"
+                                                                 src="{{ product.get_first_image.image_url }}"
+                                                                 alt="img" style="max-height: 300px;">
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-body pt-0">
+                                                        <div class="product-content text-center">
+                                                            <h1 class="title fw-bold fs-20">
+                                                                <a href="{{ product.get_absolute_url }}">
+                                                                    {{ product.name }}
+                                                                </a>
+                                                            </h1>
+                                                            <div class="price">{{ product.price }} TL</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer text-center">
+                                                        <a href="{{ product.get_absolute_url }}"
+                                                           class="btn btn-primary mb-1">
+                                                            <i class="fe fe-shopping-cart mx-2"></i>
+                                                            {% trans "İncele" %}
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                    <div class="mb-5">
+                                        <div class="float-end">
+                                            <ul class="pagination ">
+                                                <li class="page-item page-prev disabled">
+                                                    <a class="page-link" href="javascript:void(0)"
+                                                       tabindex="-1">Prev</a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link"
+                                                                                href="javascript:void(0)">1</a></li>
+                                                <li class="page-item"><a class="page-link"
+                                                                         href="javascript:void(0)">2</a></li>
+                                                <li class="page-item"><a class="page-link"
+                                                                         href="javascript:void(0)">3</a></li>
+                                                <li class="page-item"><a class="page-link"
+                                                                         href="javascript:void(0)">4</a></li>
+                                                <li class="page-item"><a class="page-link"
+                                                                         href="javascript:void(0)">5</a></li>
+                                                <li class="page-item page-next">
+                                                    <a class="page-link" href="javascript:void(0)">Next</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- COL-END -->
                     </div>
-                    </div>
+                    <!-- ROW-1 CLOSED -->
                 </div>
-
+                <!-- ROW-1 END -->
             </div>
-
+            <!-- CONTAINER CLOSED -->
         </div>
     </div>
-</div>
-</section>
-<!--Top Slider Bitiş-->
-
-<!--Write A Name Başlangıç-->
-{% if widgets_1 %}
-    <section class="middle">
-        <div class="container">
-        <div class="write-name">
-            {% if widgets_1.image %}
-            <div class="write-name-left">
-                <img src="{{ widgets_1.image.url}}" alt="" width="193" height="205">
-            </div>
-            {% endif %}
-            <div class="write-name-right">
-                <h3>{{ widgets_1.main_title}}</h3>
-                {% if widgets_1.button_text %}
-
-                {% if text_widget == "İncele" %}
-                    <button class="index-buton">
-                    <a href="{{ widgets_1.url}} " style="color: #193B64 !important;">{{ widgets_1.button_text}} <img src="{% static 'images/go.svg' %}" alt="" style="color: #193B64 !important;"></a>
-                    </button>
-                {% else %}
-                    <button class="index-buton">
-                    {{ text_widget }}
-                    </button>
-                {% endif %}
-                {% endif %}
-            </div>
-        </div>
-        </div>
-    </section>
-{% endif %}
-    <!--Write A Name Bitiş-->
-<!--Popular Başlangıç-->
-    <div class="popular">
-        <div class="container">
-                <h3></h3>
-                <div class="row">
-{% if widgets_2 %}
-                    <div class="col-lg-6">
-                        <div class="popular-left">
-                            <div class="popular-left-text">
-                                <h3>{{ widgets_2.main_title}}</h3>
-                                {% if widgets_2.button_text %}
-                                    <button class="yellow-buton" onclick="location.href='{{ widgets_2.url}}';">{{ widgets_2.button_text}} </button>
-                                {% endif %}
-                            </div>
-                            <div class="popular-left-image">
-                                {% if widgets_2.image.url %}
-                                <img src="{{ widgets_2.image.url}}" alt="" style="width:323px;height: 212px;">
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-{% endif %}
-{% if widgets_3 %}
-                    <div class="col-lg-6">
-                        <div class="popular-right">
-                            <div class="popular-right-text">
-                               <h3>{{ widgets_3.main_title}}</h3>
-                                 {% if widgets_3.button_text %}
-                                    <button class="red-buton" onclick="location.href='{{ widgets_3.url}}';">{{ widgets_3.button_text}}</button>
-                                 {% endif %}
-                            </div>
-                            <div class="popular-right-image">
-                                {% if widgets_3.image.url %}
-                                <img src="{{ widgets_3.image.url}}" alt="" style="width:361px;">
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-{% endif %}
-
-
-                </div>
-        </div>
-    </div>
-    <!--Popular Bitiş-->
-
-    <!--Adv Başlangıç-->
-{% if widgets_4 %}
-        <div class="container">
-            <a href="{{ widgets_4.url}}">
-            <div class="banner-gorsel">
-        {% if widgets_4.image %}
-        <img src="{{ widgets_4.image.url}}" alt="">
-        {% endif %}
-        <button class="gorselbuton"  onclick="location.href='{{ widgets_4.url}}';">{{ widgets_4.button_text}}</button>
-
-
-    </div></a>
-    </div>
-    <!--Adv Bitiş-->
-{% endif %}
-
-    <!--Showcase Başlangıç-->
-    <div class="showcase">
-        <div class="container">
-            <h3>{% trans "En Çok Satanlar" %}</h3>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="showcase-carousel owl-carousel owl-theme">
-
-                        {% for product in best_selling_products %}
-
-                        <div class="item">
-                        <div class="showcase-card">
-                            <div class="card-top">
-                                <img src="{{product.get_first_image.image.url}}" alt="">
-                            </div>
-                            <div class="card-bottom">
-                                <h3>{{ product.name }}</h3>
-
-                                <p class="select-category">{{ product.category }}</p>
-                                <p class="price">{{ product.price }}{% trans " ₺" %}</p>
-                                <a href="{{ product.get_absolute_url }}"><button class="card-buton">{% trans "İncele" %}</button></a>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                        {% endfor %}
-
-
-                    </div>
-
-
-
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!--Showcase Bitiş-->
-
-
-
-
-{% endblock content %}
-{% block extra_script %}
-
-
-
-
-
-{% endblock extra_script %}
+{% endblock %}

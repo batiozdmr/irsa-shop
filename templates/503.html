@@ -1,33 +1,10 @@
-{% extends "base.html" %}
-{% load i18n %}
-{% load static %}
-{% block seo %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 
-    <title>{% trans "HATA 503" %}</title>
-    <meta name="keywords" content="{{ site_settings.keyword }}"/>
-    <meta name="description" content="{{ site_settings.description }}">
-    <meta name="author" content="{{ site_settings.header_text }}">
-
-{% endblock seo %}
-{% block extra_css %}
-{% endblock extra_css %}
-{% block header %}
-
-
-{% endblock %}
-{% block content %}
-        <main class="main">
-            <div class="page-content">
-                <section
-                    class="error-section d-flex flex-column justify-content-center align-items-center text-center pl-3 pr-3">
-                    <h1 class="mb-2 ls-m">{% trans "HATA 503" %}</h1>
-                    <img src="{% static 'images/404.png' %}" alt="error 404" width="609" height="131">
-                    <h4 class="mt-7 mb-0 ls-m text-uppercase">{% trans "Sayfa Bulunamadı." %}</h4>
-                    <a href="/" class="btn btn-primary mb-4">{% trans "Anasayfa" %}</a>
-                </section>
-            </div>
-        </main>
-
-{% endblock content %}
-{% block extra_script %}
-{% endblock extra_script %}
+</body>
+</html>

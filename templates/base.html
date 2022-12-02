@@ -1,175 +1,138 @@
-<!DOCTYPE html>
 {% load i18n %}
 {% load static %}
-{% load mptt_tags %}
-{% load crispy_forms_tags %}
-<html lang="tr">
+<!doctype html>
+<html lang="tr" dir="ltr">
 <head>
-    {{ site_settings.tag|safe }}
-
+    <!-- META DATA -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ site_settings.header_text }}</title>
+    <meta name="keywords" content="{{ site_settings.keyword }}"/>
+    <meta name="description" content="{{ site_settings.description }}">
+    <meta name="author" content="{{ site_settings.header_text }}">
 
-    {% block seo %}
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "assets/images/brand/favicon.ico" %}"/>
 
-    {% endblock %}
+    <!-- TITLE -->
+    <title>File Extension</title>
 
-    <!-- Favicon -->
-    <link href="{{ site_settings.company_logo.url }}" rel="icon" data-n-head="true" sizes="16x16" type="image/png">
+    <!-- BOOTSTRAP CSS -->
+    <link id="style" href="{% static "assets/plugins/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="https://feathericon.github.io/feathericon/css/feathericon.min.css"/>
+    <!-- STYLE CSS -->
+    <link href="{% static "assets/css/style.css" %}" rel="stylesheet"/>
+    <link href="{% static "assets/css/dark-style.css" %}" rel="stylesheet"/>
+    <link href="{% static "assets/css/transparent-style.css" %}" rel="stylesheet">
+    <link href="{% static "assets/css/skin-modes.css" %}" rel="stylesheet"/>
 
-    <script>
-        WebFontConfig = {
-            google: {families: ['Open+Sans:400,600,700', 'Poppins:400,600,700']}
-        };
-        (function (d) {
-            var wf = d.createElement('script'), s = d.scripts[0];
-            wf.src = "{% static 'js/webfont.js' %}";
-            wf.async = true;
-            s.parentNode.insertBefore(wf, s);
-        })(document);
-    </script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/icon.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/hover-min.css' %}">
-    <!-- Max-768px -->
-    <link rel="stylesheet" media="(max-width:768px)" href="{% static 'css/max-768px.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-    <style>
-    </style>
-    {% block extra_css %}
+    	<!-- Plugins CSS -->
+    <link href="{% static "assets/css/plugins.css" %}" rel="stylesheet">
+    <!--- FONT-ICONS CSS -->
+{#    <link href="{% static "assets/css/icons.css" %}" rel="stylesheet"/>#}
 
-    {% endblock %}
+        <!-- INTERNAL Switcher css -->
+    <link href="{% static "assets/switcher/css/switcher." %}" rel="stylesheet">
+    <link href="{% static "assets/switcher/demo.css" %}" rel="stylesheet">
+    <!-- COLOR SKIN CSS -->
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{% static "assets/colors/color1.css" %}"/>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
 </head>
-<body>
-<div id="preloader"><img src="{% static 'images/logo.svg' %}"></div>
-<div class="page-wrapper">
 
-    <header class="header">
-        {% include 'partials/header.html' %}
+<body class="app sidebar-mini ltr dark-mode">
 
+<!-- GLOBAL-LOADER -->
+<div id="global-loader">
+    <img src="{% static "assets/images/loader.svg" %}" class="loader-img" alt="Loader">
+</div>
+<!-- /GLOBAL-LOADER -->
 
-    </header>
+<!-- PAGE -->
+<div class="page">
+    <div class="page-main">
+        {% block header %}
+            {% include 'partials/header.html' %}
+        {% endblock %}
 
+        {% block content %}
 
-    {% block content %}
+        {% endblock %}
 
-    {% endblock %}
+    </div>
     {% block footer %}
-
         {% include 'partials/footer.html' %}
-
     {% endblock %}
 
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/owl.carousel.min.js' %}"></script>
 
 
-<script>
-    $('.top-carousel').owlCarousel({
-        loop: false,
-        margin: 0,
-        autoplay: false,
-        slideTransition: 'linear',
-        nav: true,
+<!-- BACK-TO-TOP -->
+<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    })
-</script>
+<!-- JQUERY JS -->
+<script src="{% static "assets/js/jquery.min.js" %}"></script>
 
-<script>
-    $('.right-carousel').owlCarousel({
-        loop: false,
-        margin: 0,
-        autoplay: false,
-        slideTransition: 'linear',
-        nav: true,
+<!-- BOOTSTRAP JS -->
+<script src="{% static "assets/plugins/bootstrap/js/popper.min.js" %}"></script>
+<script src="{% static "assets/plugins/bootstrap/js/bootstrap.min.js" %}"></script>
 
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    })
-</script>
-<script>
-    $('.showcase-carousel').owlCarousel({
-        loop: false,
-        margin: 10,
-        autoplay: false,
-        slideTransition: 'linear',
-        nav: true,
-        navText: [
-            '<img src="{% static 'images/left.svg' %}" alt="">',
-            '<img src="{% static 'images/right.svg' %}" alt="">'
-        ],
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 4
-            }
-        }
-    })
-</script>
-<script src="{% static 'js/jquery-3.4.1.min.js ' %}"></script>
-<script>
-    $('#preloader').show(1).delay(2000).hide(1);
+<!-- SIDEBAR JS -->
+<script src="{% static "assets/plugins/sidebar/sidebar.js" %}"></script>
 
-</script>
-<script>
-    $(function () {
-        $source = $("#source");
-        $output = $("#output");
-        $source.keyup(function () {
-            $output.text($source.val());
-        });
-    });
-</script>
+<!-- SIDE-MENU JS -->
+<script src="{% static "assets/plugins/sidemenu/sidemenu.js" %}"></script>
+
+<!-- TypeHead js -->
+<script src="{% static "assets/plugins/bootstrap5-typehead/autocomplete.js" %}"></script>
+<script src="{% static "assets/js/typehead.js" %}"></script>
+
+<!-- INTERNAL File-Uploads Js-->
+<script src="{% static "assets/plugins/fancyuploder/jquery.ui.widget.js" %}"></script>
+<script src="{% static "assets/plugins/fancyuploder/jquery.fileupload.js" %}"></script>
+<script src="{% static "assets/plugins/fancyuploder/jquery.iframe-transport.js" %}"></script>
+<script src="{% static "assets/plugins/fancyuploder/jquery.fancy-fileupload.js" %}"></script>
+<script src="{% static "assets/plugins/fancyuploder/fancy-uploader.js" %}"></script>
+
+<!-- Perfect SCROLLBAR JS-->
+<script src="{% static "assets/plugins/p-scroll/perfect-scrollbar.js" %}"></script>
+<script src="{% static "assets/plugins/p-scroll/pscroll.js" %}"></script>
+<script src="{% static "assets/plugins/p-scroll/pscroll-1.js" %}"></script>
+
+<!-- Color Theme js -->
+<script src="{% static "assets/js/themeColors.js" %}"></script>
+
+<!-- Sticky js -->
+<script src="{% static "assets/js/sticky.js" %}"></script>
+
+<!-- CUSTOM JS-->
+<script src="{% static "assets/js/custom.js" %}"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QPEJQPJ9CR"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
 
-    gtag('js', new Date());
+{% if messages %}
+    {% for message in messages %}
+        {% if forloop.last %}
+            <script>
+                Swal.fire({
+                    position: 'top-right',
+                    icon: '{{ message.tags }}',
+                    title: '{{ message|safe }}',
+                    showConfirmButton: false,
+                    timer: 2300
+                })
+            </script>
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
-    gtag('config', 'G-QPEJQPJ9CR');
-</script>
-{% block extra_script %}
-{% endblock %}
+
 </body>
+
 </html>
